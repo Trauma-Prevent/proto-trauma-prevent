@@ -2,6 +2,8 @@ var express = require("express");
 const bodyParser = require('body-parser');
 var app = express();
 
+const port = process.env.PORT || 80
+
 app.get("/", (req, res, next) => {
     res.sendFile('index.html', { root: __dirname });
 });
@@ -56,6 +58,6 @@ app.get("/page4", (req, res, next) => {
     res.sendFile('pages/end.html', { root: __dirname });
 });
 
-app.listen(80, () => {
- console.log("Server running on port 80");
+app.listen(PORT, () => {
+ console.log("Server running on port 80" + Port);
 });
