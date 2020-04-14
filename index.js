@@ -8,7 +8,8 @@ app.get("/", (req, res, next) => {
     res.sendFile('index.html', { root: __dirname });
 });
 
-
+app.use('/', express.static(__dirname+'/lib/bootstrap-page'));
+app.use('/', express.static(__dirname+'/lib/tetris/build'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -56,6 +57,6 @@ app.get("/page4", (req, res, next) => {
     res.sendFile('pages/end.html', { root: __dirname });
 });
 
-app.listen(PORT, () => {
- console.log("Server running on port 80" + Port);
+app.listen(port, () => {
+ console.log("Server running on port 80" + port);
 });
