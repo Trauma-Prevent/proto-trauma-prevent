@@ -7,8 +7,6 @@ app.get("/", (req, res, next) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', express.static(__dirname+'/lib/bootstrap-page'));
-app.use('/', express.static(__dirname+'/lib/tetris/build'));
 
 app.get("/page1", (req, res, next) => {
     res.sendFile('pages/form1.html', { root: __dirname });
