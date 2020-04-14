@@ -1,18 +1,16 @@
-var express = require("express");
+const express = require("express");
 const bodyParser = require('body-parser');
-var app = express();
+const app = express();
 
 const port = process.env.PORT || 80
 
 app.use('/', express.static(__dirname+'/lib/bootstrap-page'));
+app.use('/', express.static(__dirname+'/lib/tetris/build'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res, next) => {
     res.sendFile('index.html', { root: __dirname });
 });
-
-app.use('/', express.static(__dirname+'/lib/tetris/build'));
-
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/page1", (req, res, next) => {
     res.sendFile('pages/form1.html', { root: __dirname });
@@ -59,5 +57,5 @@ app.get("/page4", (req, res, next) => {
 });
 
 app.listen(port, () => {
- console.log("Server running on port 80" + port);
+ console.log("Server running on port " + port);
 });
