@@ -106,3 +106,6 @@ dist
 
 # Specific page
 pages/page4.html
+
+# Git repos
+.git/
