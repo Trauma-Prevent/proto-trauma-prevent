@@ -19,6 +19,21 @@
   <!-- Font Awesome CDN (may break) #TODO -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <style>
+    img {
+        width:50%;
+        margin:5%;
+    }
+    hr {
+        margin:5%;
+    }
+    h3 {
+        margin:10%;
+        text-align:center;
+        font-color: #333;
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -35,76 +50,964 @@
     <div class="container">
       <div class="row">
           <div class="col-lg-8 mx-auto">
-              <form method='POST'>
+
+              <form method="POST">
+
+                  <h3 style="margin-top:-10%;">Part 1</h3>
+
                   <div class="form-group row">
-                      <label for="text" class="col-4 col-form-label">Text Field</label>
-                      <div class="col-8">
-                          <div class="input-group">
-                              <div class="input-group-prepend">
-                                  <div class="input-group-text">
-                                      <i class="fa fa-address-card"></i>
-                                  </div>
-                              </div>
-                              <input id="text" name="text" type="text" class="form-control">
-                          </div>
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <input id="pseudo" name="pseudo" placeholder="Enter your pseudonym" type="text" aria-describedby="pseudoHelpBlock" required="required" class="form-control"> 
+                          <span id="pseudoHelpBlock" class="form-text text-muted">Choose a pseudonym if you or we need to retreive your information while protecting your real identity.</span>
                       </div>
                   </div>
-                  <div class="form-group row">
-                      <label for="text1" class="col-4 col-form-label">Text Field</label>
-                      <div class="col-8">
-                          <input id="text1" name="text1" type="text" class="form-control">
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <input id="age" name="age" placeholder="Enter your age" type="number" min="0" max="120" aria-describedby="ageHelpBlock" required="required" class="form-control"> 
+                          <span id="ageHelpBlock" class="form-text text-muted">How old are you?</span>
                       </div>
                   </div>
-                  <div class="form-group row">
-                      <label for="select" class="col-4 col-form-label">Select</label>
-                      <div class="col-8">
-                          <select id="select" name="select" class="custom-select">
-                              <option value="rabbit">Rabbit</option>
-                              <option value="duck">Duck</option>
-                              <option value="fish">Fish</option>
-                          </select>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <select id="gender" name="gender" aria-describedby="genderHelpBlock" required="required" class="custom-select">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="1">Male</option>
+                              <option value="2">Female</option>
+                              <option value="3">Other</option>
+                          </select> 
+                          <span id="genderHelpBlock" class="form-text text-muted">What is your gender?</span>
                       </div>
                   </div>
-                  <div class="form-group row">
-                      <label class="col-4">Checkboxes</label>
-                      <div class="col-8">
-                          <div class="custom-control custom-checkbox custom-control-inline">
-                              <input name="checkbox" id="checkbox_0" type="checkbox" checked="checked" class="custom-control-input" value="rabbit">
-                              <label for="checkbox_0" class="custom-control-label">Rabbit</label>
-                          </div>
-                          <div class="custom-control custom-checkbox custom-control-inline">
-                              <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="duck">
-                              <label for="checkbox_1" class="custom-control-label">Duck</label>
-                          </div>
-                          <div class="custom-control custom-checkbox custom-control-inline">
-                              <input name="checkbox" id="checkbox_2" type="checkbox" class="custom-control-input" value="fish">
-                              <label for="checkbox_2" class="custom-control-label">Fish</label>
-                          </div>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <select id="education" name="education" aria-describedby="educationHelpBlock" required="required" class="custom-select">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="1">Primary education</option>
+                              <option value="2">Secondary education</option>
+                              <option value="3">University (Higher education)</option>
+                          </select> 
+                          <span id="educationHelpBlock" class="form-text text-muted">What is your highest level of education?</span>
                       </div>
                   </div>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <select id="trauma" name="trauma" aria-describedby="traumaHelpBlock" required="required" class="custom-select">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="1">None</option>
+                              <option value="2">Non-interpersonal</option>
+                              <option value="3">Interpersonal</option>
+                          </select> 
+                          <span id="traumaHelpBlock" class="form-text text-muted">Did you ever had a trauma?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <select id="trauma_desc" name="trauma_desc" aria-describedby="trauma_descHelpBlock" class="custom-select" required="required">
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="1">Direct perceived life threat to self</option>
+                              <option value="2">Perceived life threat to other</option>
+                          </select> 
+                          <span id="trauma_descHelpBlock" class="form-text text-muted">How would you describe the trauma you experienced?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <input id="trauma_num" name="trauma_num" placeholder="Enter the number of intrusive memories you got today" type="number" aria-describedby="trauma_numHelpBlock" class="form-control" required="required"> 
+                          <span id="trauma_numHelpBlock" class="form-text text-muted">How many intrusive memories?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <label class="col-2"></label> 
+                      <div class="col-10">
+                          <span id="textHelpBlock" class="form-text text-muted">Consider psychological, social, and occupational functioning on a hypothetical continuum of mental health-illness.</span>
+                          <a href="/static/images/continuum.png"><img src="/static/images/continuum.png" />
+                          <span>Click to enlarge</span></a>
+                          <input id="text" name="text" placeholder="Enter a number between 0 and 100" type="number" min="0" max="100" class="form-control" aria-describedby="textHelpBlock" required="required"> 
+                          <span id="textHelpBlock" class="form-text text-muted">Do not include impairment in functioning due to physical (or environmental) limitations.</span>
+                      </div>
+                  </div>
+
+                  <h3>Part 2</h3>
+
                   <div class="form-group row">
-                      <label class="col-4">Radio Buttons</label>
-                      <div class="col-8">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
                           <div class="custom-control custom-radio custom-control-inline">
-                              <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="rabbit">
-                              <label for="radio_0" class="custom-control-label">Rabbit</label>
+                              <label for="radio_1_0" class="custom-control-label">1</label>
+                              <input name="radio_1" id="radio_1_0" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="1"> 
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                              <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="duck">
-                              <label for="radio_1" class="custom-control-label">Duck</label>
+                              <label for="radio_1_1" class="custom-control-label">2</label>
+                              <input name="radio_1" id="radio_1_1" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="2"> 
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                              <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="fish">
-                              <label for="radio_2" class="custom-control-label">Fish</label>
+                              <label for="radio_1_2" class="custom-control-label">3</label>
+                              <input name="radio_1" id="radio_1_2" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="3" checked="checked"> 
                           </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_1_3" class="custom-control-label">4</label>
+                              <input name="radio_1" id="radio_1_3" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="4"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_1_4" class="custom-control-label">5</label>
+                              <input name="radio_1" id="radio_1_4" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="5"> 
+                          </div> 
+                          <span id="radio_1HelpBlock" class="form-text text-muted">Repeated, disturbing, and unwanted memories of the stressful experience?</span>
                       </div>
                   </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2_0" class="custom-control-label">1</label>
+                              <input name="radio_2" id="radio_2_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2_1" class="custom-control-label">2</label>
+                              <input name="radio_2" id="radio_2_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2_2" class="custom-control-label">3</label>
+                              <input name="radio_2" id="radio_2_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2_3" class="custom-control-label">4</label>
+                              <input name="radio_2" id="radio_2_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2_4" class="custom-control-label">5</label>
+                              <input name="radio_2" id="radio_2_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_2HelpBlock"> 
+                          </div> 
+                          <span id="radio_2HelpBlock" class="form-text text-muted">Repeated, disturbing dreams of the stressful experience?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3_0" class="custom-control-label">1</label>
+                              <input name="radio_3" id="radio_3_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3_1" class="custom-control-label">2</label>
+                              <input name="radio_3" id="radio_3_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3_2" class="custom-control-label">3</label>
+                              <input name="radio_3" id="radio_3_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3_3" class="custom-control-label">4</label>
+                              <input name="radio_3" id="radio_3_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3_4" class="custom-control-label">5</label>
+                              <input name="radio_3" id="radio_3_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_3HelpBlock"> 
+                          </div> 
+                          <span id="radio_3HelpBlock" class="form-text text-muted">Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4_0" class="custom-control-label">1</label>
+                              <input name="radio_4" id="radio_4_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4_1" class="custom-control-label">2</label>
+                              <input name="radio_4" id="radio_4_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4_2" class="custom-control-label">3</label>
+                              <input name="radio_4" id="radio_4_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4_3" class="custom-control-label">4</label>
+                              <input name="radio_4" id="radio_4_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4_4" class="custom-control-label">5</label>
+                              <input name="radio_4" id="radio_4_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_4HelpBlock"> 
+                          </div> 
+                          <span id="radio_4HelpBlock" class="form-text text-muted">Feeling very upset when something reminded you of the stressful experience?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_5_0" class="custom-control-label">1</label>
+                              <input name="radio_5" id="radio_5_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_5_1" class="custom-control-label">2</label>
+                              <input name="radio_5" id="radio_5_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_5_2" class="custom-control-label">3</label>
+                              <input name="radio_5" id="radio_5_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_5_3" class="custom-control-label">4</label>
+                              <input name="radio_5" id="radio_5_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_5_4" class="custom-control-label">5</label>
+                              <input name="radio_5" id="radio_5_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_5HelpBlock"> 
+                          </div> 
+                          <span id="radio_5HelpBlock" class="form-text text-muted">Having strong physical reactions when something reminded you of the stressful experience (for example, heart pounding, trouble breathing, sweating)?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_6_0" class="custom-control-label">1</label>
+                              <input name="radio_6" id="radio_6_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_6_1" class="custom-control-label">2</label>
+                              <input name="radio_6" id="radio_6_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_6_2" class="custom-control-label">3</label>
+                              <input name="radio_6" id="radio_6_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_6_3" class="custom-control-label">4</label>
+                              <input name="radio_6" id="radio_6_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_6_4" class="custom-control-label">5</label>
+                              <input name="radio_6" id="radio_6_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_6HelpBlock"> 
+                          </div> 
+                          <span id="radio_6HelpBlock" class="form-text text-muted">Avoiding memories, thoughts, or feelings related to the stressful experience?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_7_0" class="custom-control-label">1</label>
+                              <input name="radio_7" id="radio_7_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_7_1" class="custom-control-label">2</label>
+                              <input name="radio_7" id="radio_7_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_7_2" class="custom-control-label">3</label>
+                              <input name="radio_7" id="radio_7_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_7_3" class="custom-control-label">4</label>
+                              <input name="radio_7" id="radio_7_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_7_4" class="custom-control-label">5</label>
+                              <input name="radio_7" id="radio_7_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_7HelpBlock"> 
+                          </div> 
+                          <span id="radio_7HelpBlock" class="form-text text-muted">Avoiding external reminders of the stressful experience (for example, people, places, conversations, activities, objects, or situations)?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_8_0" class="custom-control-label">1</label>
+                              <input name="radio_8" id="radio_8_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_8_1" class="custom-control-label">2</label>
+                              <input name="radio_8" id="radio_8_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_8_2" class="custom-control-label">3</label>
+                              <input name="radio_8" id="radio_8_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_8_3" class="custom-control-label">4</label>
+                              <input name="radio_8" id="radio_8_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_8_4" class="custom-control-label">5</label>
+                              <input name="radio_8" id="radio_8_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_8HelpBlock"> 
+                          </div> 
+                          <span id="radio_8HelpBlock" class="form-text text-muted">Trouble remembering important parts of the stressful experience?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_9_0" class="custom-control-label">1</label>
+                              <input name="radio_9" id="radio_9_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_9_1" class="custom-control-label">2</label>
+                              <input name="radio_9" id="radio_9_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_9_2" class="custom-control-label">3</label>
+                              <input name="radio_9" id="radio_9_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_9_3" class="custom-control-label">4</label>
+                              <input name="radio_9" id="radio_9_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_9_4" class="custom-control-label">5</label>
+                              <input name="radio_9" id="radio_9_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_9HelpBlock"> 
+                          </div> 
+                          <span id="radio_9HelpBlock" class="form-text text-muted">Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_10_0" class="custom-control-label">1</label>
+                              <input name="radio_10" id="radio_10_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_10_1" class="custom-control-label">2</label>
+                              <input name="radio_10" id="radio_10_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_10_2" class="custom-control-label">3</label>
+                              <input name="radio_10" id="radio_10_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_10_3" class="custom-control-label">4</label>
+                              <input name="radio_10" id="radio_10_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_10_4" class="custom-control-label">5</label>
+                              <input name="radio_10" id="radio_10_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_10HelpBlock"> 
+                          </div> 
+                          <span id="radio_10HelpBlock" class="form-text text-muted">Blaming yourself or someone else for the stressful experience or what happened after it?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_11_0" class="custom-control-label">1</label>
+                              <input name="radio_11" id="radio_11_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_11_1" class="custom-control-label">2</label>
+                              <input name="radio_11" id="radio_11_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_11_2" class="custom-control-label">3</label>
+                              <input name="radio_11" id="radio_11_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_11_3" class="custom-control-label">4</label>
+                              <input name="radio_11" id="radio_11_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_11_4" class="custom-control-label">5</label>
+                              <input name="radio_11" id="radio_11_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_11HelpBlock"> 
+                          </div> 
+                          <span id="radio_11HelpBlock" class="form-text text-muted">Having strong negative feelings such as fear, horror, anger, guilt, or shame?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_12_0" class="custom-control-label">1</label>
+                              <input name="radio_12" id="radio_12_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_12_1" class="custom-control-label">2</label>
+                              <input name="radio_12" id="radio_12_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_12_2" class="custom-control-label">3</label>
+                              <input name="radio_12" id="radio_12_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_12_3" class="custom-control-label">4</label>
+                              <input name="radio_12" id="radio_12_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_12_4" class="custom-control-label">5</label>
+                              <input name="radio_12" id="radio_12_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_12HelpBlock"> 
+                          </div> 
+                          <span id="radio_12HelpBlock" class="form-text text-muted">Loss of interest in activities that you used to enjoy?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_13_0" class="custom-control-label">1</label>
+                              <input name="radio_13" id="radio_13_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_13HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_13_1" class="custom-control-label">2</label>
+                              <input name="radio_13" id="radio_13_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_13HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_13_2" class="custom-control-label">3</label>
+                              <input name="radio_13" id="radio_13_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_13HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_13_3" class="custom-control-label">4</label>
+                              <input name="radio_13" id="radio_13_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_13HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_13_4" class="custom-control-label">5</label>
+                              <input name="radio_13" id="radio_13_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_13HelpBlock"> 
+                          </div> 
+                          <span id="radio_13HelpBlock" class="form-text text-muted">Feeling distant or cut off from other people?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_14_0" class="custom-control-label">1</label>
+                              <input name="radio_14" id="radio_14_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_14HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_14_1" class="custom-control-label">2</label>
+                              <input name="radio_14" id="radio_14_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_14HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_14_2" class="custom-control-label">3</label>
+                              <input name="radio_14" id="radio_14_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_14HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_14_3" class="custom-control-label">4</label>
+                              <input name="radio_14" id="radio_14_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_14HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_14_4" class="custom-control-label">5</label>
+                              <input name="radio_14" id="radio_14_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_14HelpBlock"> 
+                          </div> 
+                          <span id="radio_14HelpBlock" class="form-text text-muted">Trouble experiencing positive feelings (for example, being unable to feel happiness or have loving feelings for people close to you)?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_15_0" class="custom-control-label">1</label>
+                              <input name="radio_15" id="radio_15_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_15HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_15_1" class="custom-control-label">2</label>
+                              <input name="radio_15" id="radio_15_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_15HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_15_2" class="custom-control-label">3</label>
+                              <input name="radio_15" id="radio_15_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_15HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_15_3" class="custom-control-label">4</label>
+                              <input name="radio_15" id="radio_15_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_15HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_15_4" class="custom-control-label">5</label>
+                              <input name="radio_15" id="radio_15_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_15HelpBlock"> 
+                          </div> 
+                          <span id="radio_15HelpBlock" class="form-text text-muted">Irritable behavior, angry outbursts, or acting aggressively?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_16_0" class="custom-control-label">1</label>
+                              <input name="radio_16" id="radio_16_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_16HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_16_1" class="custom-control-label">2</label>
+                              <input name="radio_16" id="radio_16_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_16HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_16_2" class="custom-control-label">3</label>
+                              <input name="radio_16" id="radio_16_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_16HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_16_3" class="custom-control-label">4</label>
+                              <input name="radio_16" id="radio_16_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_16HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_16_4" class="custom-control-label">5</label>
+                              <input name="radio_16" id="radio_16_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_16HelpBlock"> 
+                          </div> 
+                          <span id="radio_16HelpBlock" class="form-text text-muted">Taking too many risks or doing things that could cause you harm?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_17_0" class="custom-control-label">1</label>
+                              <input name="radio_17" id="radio_17_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_17HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_17_1" class="custom-control-label">2</label>
+                              <input name="radio_17" id="radio_17_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_17HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_17_2" class="custom-control-label">3</label>
+                              <input name="radio_17" id="radio_17_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_17HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_17_3" class="custom-control-label">4</label>
+                              <input name="radio_17" id="radio_17_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_17HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_17_4" class="custom-control-label">5</label>
+                              <input name="radio_17" id="radio_17_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_17HelpBlock"> 
+                          </div> 
+                          <span id="radio_17HelpBlock" class="form-text text-muted">Being “superalert” or watchful or on guard?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_18_0" class="custom-control-label">1</label>
+                              <input name="radio_18" id="radio_18_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_18HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_18_1" class="custom-control-label">2</label>
+                              <input name="radio_18" id="radio_18_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_18HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_18_2" class="custom-control-label">3</label>
+                              <input name="radio_18" id="radio_18_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_18HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_18_3" class="custom-control-label">4</label>
+                              <input name="radio_18" id="radio_18_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_18HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_18_4" class="custom-control-label">5</label>
+                              <input name="radio_18" id="radio_18_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_18HelpBlock"> 
+                          </div> 
+                          <span id="radio_18HelpBlock" class="form-text text-muted">Feeling jumpy or easily startled?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_19_0" class="custom-control-label">1</label>
+                              <input name="radio_19" id="radio_19_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_19HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_19_1" class="custom-control-label">2</label>
+                              <input name="radio_19" id="radio_19_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_19HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_19_2" class="custom-control-label">3</label>
+                              <input name="radio_19" id="radio_19_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_19HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_19_3" class="custom-control-label">4</label>
+                              <input name="radio_19" id="radio_19_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_19HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_19_4" class="custom-control-label">5</label>
+                              <input name="radio_19" id="radio_19_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_19HelpBlock"> 
+                          </div> 
+                          <span id="radio_19HelpBlock" class="form-text text-muted">Having difficulty concentrating?</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_20_0" class="custom-control-label">1</label>
+                              <input name="radio_20" id="radio_20_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio_20HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_20_1" class="custom-control-label">2</label>
+                              <input name="radio_20" id="radio_20_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio_20HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_20_2" class="custom-control-label">3</label>
+                              <input name="radio_20" id="radio_20_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio_20HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_20_3" class="custom-control-label">4</label>
+                              <input name="radio_20" id="radio_20_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio_20HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_20_4" class="custom-control-label">5</label>
+                              <input name="radio_20" id="radio_20_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio_20HelpBlock"> 
+                          </div> 
+                          <span id="radio_20HelpBlock" class="form-text text-muted">Trouble falling or staying asleep?</span>
+                      </div>
+                  </div>
+
+                  <h3>Part 3</h3>
+
                   <div class="form-group row">
-                      <div class="offset-4 col-8">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_0" class="custom-control-label">1</label>
+                              <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="1" aria-describedby="radioHelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_1" class="custom-control-label">2</label>
+                              <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="2" aria-describedby="radioHelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_2" class="custom-control-label">3</label>
+                              <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="3" aria-describedby="radioHelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_3" class="custom-control-label">4</label>
+                              <input name="radio" id="radio_3" type="radio" class="custom-control-input" value="4" aria-describedby="radioHelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio_4" class="custom-control-label">5</label>
+                              <input name="radio" id="radio_4" type="radio" class="custom-control-input" value="5" aria-describedby="radioHelpBlock"> 
+                          </div> 
+                          <span id="radioHelpBlock" class="form-text text-muted">I felt helpless.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio1_0" class="custom-control-label">1</label>
+                              <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio1HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio1_1" class="custom-control-label">2</label>
+                              <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio1HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio1_2" class="custom-control-label">3</label>
+                              <input name="radio1" id="radio1_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio1HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio1_3" class="custom-control-label">4</label>
+                              <input name="radio1" id="radio1_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio1HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio1_4" class="custom-control-label">5</label>
+                              <input name="radio1" id="radio1_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio1HelpBlock"> 
+                          </div> 
+                          <span id="radio1HelpBlock" class="form-text text-muted">I felt sadness and grief.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio2_0" class="custom-control-label">1</label>
+                              <input name="radio2" id="radio2_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio2_1" class="custom-control-label">2</label>
+                              <input name="radio2" id="radio2_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio2_2" class="custom-control-label">3</label>
+                              <input name="radio2" id="radio2_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio2_3" class="custom-control-label">4</label>
+                              <input name="radio2" id="radio2_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio2HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio2_4" class="custom-control-label">5</label>
+                              <input name="radio2" id="radio2_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio2HelpBlock"> 
+                          </div> 
+                          <span id="radio2HelpBlock" class="form-text text-muted">I felt frustrated or angry.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio3_0" class="custom-control-label">1</label>
+                              <input name="radio3" id="radio3_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio3_1" class="custom-control-label">2</label>
+                              <input name="radio3" id="radio3_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio3_2" class="custom-control-label">3</label>
+                              <input name="radio3" id="radio3_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio3_3" class="custom-control-label">4</label>
+                              <input name="radio3" id="radio3_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio3HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio3_4" class="custom-control-label">5</label>
+                              <input name="radio3" id="radio3_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio3HelpBlock"> 
+                          </div> 
+                          <span id="radio3HelpBlock" class="form-text text-muted">I felt afraid for my own safety.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio4_0" class="custom-control-label">1</label>
+                              <input name="radio4" id="radio4_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio4_1" class="custom-control-label">2</label>
+                              <input name="radio4" id="radio4_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio4_2" class="custom-control-label">3</label>
+                              <input name="radio4" id="radio4_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio4_3" class="custom-control-label">4</label>
+                              <input name="radio4" id="radio4_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio4HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio4_4" class="custom-control-label">5</label>
+                              <input name="radio4" id="radio4_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio4HelpBlock"> 
+                          </div> 
+                          <span id="radio4HelpBlock" class="form-text text-muted">I felt guilty.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio5_0" class="custom-control-label">1</label>
+                              <input name="radio5" id="radio5_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio5_1" class="custom-control-label">2</label>
+                              <input name="radio5" id="radio5_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio5_2" class="custom-control-label">3</label>
+                              <input name="radio5" id="radio5_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio5_3" class="custom-control-label">4</label>
+                              <input name="radio5" id="radio5_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio5HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio5_4" class="custom-control-label">5</label>
+                              <input name="radio5" id="radio5_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio5HelpBlock"> 
+                          </div> 
+                          <span id="radio5HelpBlock" class="form-text text-muted">I felt ashamed of my emotional reactions.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio6_0" class="custom-control-label">1</label>
+                              <input name="radio6" id="radio6_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio6_1" class="custom-control-label">2</label>
+                              <input name="radio6" id="radio6_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio6_2" class="custom-control-label">3</label>
+                              <input name="radio6" id="radio6_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio6_3" class="custom-control-label">4</label>
+                              <input name="radio6" id="radio6_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio6HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio6_4" class="custom-control-label">5</label>
+                              <input name="radio6" id="radio6_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio6HelpBlock"> 
+                          </div> 
+                          <span id="radio6HelpBlock" class="form-text text-muted">I felt worried about the safety of others.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio7_0" class="custom-control-label">1</label>
+                              <input name="radio7" id="radio7_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio7_1" class="custom-control-label">2</label>
+                              <input name="radio7" id="radio7_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio7_2" class="custom-control-label">3</label>
+                              <input name="radio7" id="radio7_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio7_3" class="custom-control-label">4</label>
+                              <input name="radio7" id="radio7_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio7HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio7_4" class="custom-control-label">5</label>
+                              <input name="radio7" id="radio7_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio7HelpBlock"> 
+                          </div> 
+                          <span id="radio7HelpBlock" class="form-text text-muted">I had the feeling I was about to loose control of my emotions.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio8_0" class="custom-control-label">1</label>
+                              <input name="radio8" id="radio8_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio8_1" class="custom-control-label">2</label>
+                              <input name="radio8" id="radio8_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio8_2" class="custom-control-label">3</label>
+                              <input name="radio8" id="radio8_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio8_3" class="custom-control-label">4</label>
+                              <input name="radio8" id="radio8_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio8HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio8_4" class="custom-control-label">5</label>
+                              <input name="radio8" id="radio8_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio8HelpBlock"> 
+                          </div> 
+                          <span id="radio8HelpBlock" class="form-text text-muted">I had difficulty controlling my bowel and bladder.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio9_0" class="custom-control-label">1</label>
+                              <input name="radio9" id="radio9_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio9_1" class="custom-control-label">2</label>
+                              <input name="radio9" id="radio9_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio9_2" class="custom-control-label">3</label>
+                              <input name="radio9" id="radio9_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio9_3" class="custom-control-label">4</label>
+                              <input name="radio9" id="radio9_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio9HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio9_4" class="custom-control-label">5</label>
+                              <input name="radio9" id="radio9_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio9HelpBlock"> 
+                          </div> 
+                          <span id="radio9HelpBlock" class="form-text text-muted">I was horrified by what I saw.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio10_0" class="custom-control-label">1</label>
+                              <input name="radio10" id="radio10_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio10_1" class="custom-control-label">2</label>
+                              <input name="radio10" id="radio10_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio10_2" class="custom-control-label">3</label>
+                              <input name="radio10" id="radio10_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio10_3" class="custom-control-label">4</label>
+                              <input name="radio10" id="radio10_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio10HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio10_4" class="custom-control-label">5</label>
+                              <input name="radio10" id="radio10_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio10HelpBlock"> 
+                          </div> 
+                          <span id="radio10HelpBlock" class="form-text text-muted">I had physical reactions like sweating, shaking, and my heart pounding.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio11_0" class="custom-control-label">1</label>
+                              <input name="radio11" id="radio11_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio11_1" class="custom-control-label">2</label>
+                              <input name="radio11" id="radio11_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio11_2" class="custom-control-label">3</label>
+                              <input name="radio11" id="radio11_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio11_3" class="custom-control-label">4</label>
+                              <input name="radio11" id="radio11_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio11HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio11_4" class="custom-control-label">5</label>
+                              <input name="radio11" id="radio11_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio11HelpBlock"> 
+                          </div> 
+                          <span id="radio11HelpBlock" class="form-text text-muted">I felt I might pass out.</span>
+                      </div>
+                  </div>
+                  <hr><div class="form-group row">
+                      <div class="col-2"></div> 
+                      <div class="col-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio12_0" class="custom-control-label">1</label>
+                              <input name="radio12" id="radio12_0" type="radio" class="custom-control-input" value="1" aria-describedby="radio12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio12_1" class="custom-control-label">2</label>
+                              <input name="radio12" id="radio12_1" type="radio" class="custom-control-input" value="2" aria-describedby="radio12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio12_2" class="custom-control-label">3</label>
+                              <input name="radio12" id="radio12_2" type="radio" class="custom-control-input" value="3" aria-describedby="radio12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio12_3" class="custom-control-label">4</label>
+                              <input name="radio12" id="radio12_3" type="radio" class="custom-control-input" value="4" aria-describedby="radio12HelpBlock"> 
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                              <label for="radio12_4" class="custom-control-label">5</label>
+                              <input name="radio12" id="radio12_4" type="radio" class="custom-control-input" value="5" aria-describedby="radio12HelpBlock"> 
+                          </div> 
+                          <span id="radio12HelpBlock" class="form-text text-muted">I thought I might die.</span>
+                      </div>
+                  </div> 
+                  <hr><div class="form-group row">
+                      <div class="offset-4 col-10">
                           <button name="submit" type="submit" class="btn btn-primary">Submit</button>
                       </div>
                   </div>
               </form>
+
+
+
+
+
           </div>
       </div>
     </div>
