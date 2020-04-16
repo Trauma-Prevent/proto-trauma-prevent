@@ -109,3 +109,4 @@ dist
 # Miscalenous
 lib/tetris/build/
 tags*
+pages/tetris.html
