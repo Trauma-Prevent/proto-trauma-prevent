@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -12,6 +13,15 @@ app.use('/static/', express.static(__dirname+'/static'));
 app.use('/', express.static(__dirname+'/lib/bootstrap-page'));
 app.use('/', express.static(__dirname+'/lib/tetris/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.get("/login", (req, res) =>{
+    res.sendFile('pages/login.html', { root: __dirname });
+})
+
+app.post("/login", (req, res) =>{
+    res.send(req.body);
+})
 
 app.get("/page1", (req, res, next) => {
     res.sendFile('pages/form1.html', { root: __dirname });
