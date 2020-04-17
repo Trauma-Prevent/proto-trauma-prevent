@@ -107,9 +107,10 @@ dist
 .git/
  
 # Miscalenous
-lib/tetris/build/
+# needed build to run on heroku...
+#lib/tetris/build/
 tags*
-pages/tetris.html
+#pages/tetris.html
 
 # going yarn
 package-lock.json
