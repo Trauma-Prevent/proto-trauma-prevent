@@ -110,3 +110,6 @@ dist
 lib/tetris/build/
 tags*
 pages/tetris.html
+
+# going yarn
+package-lock.json
