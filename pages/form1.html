@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="Trauma Tetris, web prototype" content="">
-  <meta name="Guillaume Ferron" content="">
+  <meta name="Guillaume Ferron, Thomas Gargot" content="">
 
-  <title>Trauma Tetris</title>
+  <title>Trauma Prevent</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +60,11 @@ A simple brief digital intervention based on cognitive science
                   <div class="form-group row">
                       <label class="col-2"></label> 
                       <div class="col-10">
-                          <input id="pseudo" name="pseudo" placeholder="Enter your pseudonym" type="text" aria-describedby="pseudoHelpBlock" required="required" class="form-control"> 
-                          <span id="pseudoHelpBlock" class="form-text text-muted">Choose a pseudonym if you or we need to retrieive your information while protecting your real identity.</span>
+
+                          <input id="pseudo" name="mail" placeholder="Enter your email adress" type="text" aria-describedby="pseudoHelpBlock" required="required" class="form-control"> 
+                          <span id="pseudoHelpBlock" class="form-text text-muted">Please enter a mail adress, if you or we need to retrieive your information </span>
+                          <p class="lead">  To improve the protection  of your real identity, we recommand you to create a special email adress with a pseudo instead of your real name. For a tutorial, you can check how to <a href="https://www.wikihow.com/Make-an-Email-Address-for-Free">create an email</a></p>
+
                       </div>
                   </div>
                   <hr><div class="form-group row">
@@ -123,7 +126,7 @@ A simple brief digital intervention based on cognitive science
                       <label class="col-2"></label> 
                       <div class="col-10">
                           <input id="trauma_num" name="trauma_num" placeholder="Enter the number of intrusive memories you got today" type="number" aria-describedby="trauma_numHelpBlock" class="form-control" required="required"> 
-                          <span id="trauma_numHelpBlock" class="form-text text-muted">How many intrusive memories?</span>
+                          <span id="trauma_numHelpBlock" class="form-text text-muted">How many intrusive memories did you have yesterday ?</span>
                       </div>
                   </div>
                   <hr><div class="form-group row">
@@ -137,7 +140,7 @@ A simple brief digital intervention based on cognitive science
                       </div>
                   </div>
 
-                  <h3>In the past month, how much were you bothered by (1: Not at all - 5: Extremely) (PCL-5): </h3>
+                  <h3>Since the trauma, how much were you bothered by (1: Not at all - 5: Extremely) (PCL-5): </h3>
 
                   <div class="form-group row">
                       <div class="col-2"></div> 
@@ -661,8 +664,7 @@ A simple brief digital intervention based on cognitive science
                   </div>
 
                   <h3>Which number best describes the experiences you had had during and immediately after the critical incident. If an item does not apply to your experience, please choose "not at all true" (PDI). 
-(1: Not at all true to 5: Extremely true)
-</h3>
+(1: Not at all true to 5: Extremely true)</h3>
 
                   <div class="form-group row">
                       <div class="col-2"></div> 
