@@ -81,7 +81,7 @@ app.post("/login", (req, res) =>{
 
 app.get("/page1", (req, res, next) => {
     if(!req.user) {
-        res.status(401).redirect("/login");
+        res.status(401).redirect("/register");
     } else {
         res.status(200).sendFile('pages/form1.html', { root: __dirname });
     }
@@ -89,7 +89,7 @@ app.get("/page1", (req, res, next) => {
 
 app.post('/page1', (req, res) => {
     if(!req.user) {
-        res.status(401).redirect("/login");
+        res.status(401).redirect("/register");
     } else {
         res.status(200).redirect('/page2')
     }
