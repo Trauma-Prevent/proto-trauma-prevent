@@ -6,9 +6,9 @@
   "scripts": {
     "install-deps": "cd lib/tetris; yarn install; cd ../../;yarn install",
     "build" : "node db/db.setup.js",
-    "build-local": "cd lib/tetris && npm run build && cp build/index.html ../../pages/tetris.html",
+    "build-dep": "cd lib/tetris && npm run build && cp build/index.html ../../pages/tetris.html",
     "start": "node index.js",
-    "start-dev": "DATABASE_URI=postgres://$(whoami):@localhost:5432/postgres nodemon index.js"
+    "start-dev": "DATABASE_URL=postgres://$(whoami):@localhost:5432/postgres nodemon index.js"
   },
   "author": "Guillaume Ferron",
   "license": "GPL-3.0-or-later",
