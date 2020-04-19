@@ -4,7 +4,7 @@ Simple prototype visant à illustrer le concept et peut-être fournir une premi�
 ```
 yarn install
 yarn build
-yarn build-deb
+yarn build-dep
 
 ### Development
 yarn run start-dev
