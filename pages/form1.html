@@ -140,8 +140,8 @@
                                 <label class="col-2"></label> 
                                 <div class="col-8">
                                     <span id="textHelpBlock" class="form-text text-muted">How would you evaluate your current state of psychologic functioning at the moment? Consider psychological, social, and occupational functioning on a hypothetical continuum of mental health-illness.</span>
-                                    <a href="/static/images/continuum.png"><img src="/static/images/continuum.png" />
-                                        <span>Click to enlarge</span></a>
+                                    <a id="image1_link" href="#"><img id="image1" src="/static/images/continuum.png" />
+                                    <span>View</span></a>
                                     <input id="text" name="text" placeholder="Enter a number between 0 and 100" type="number" min="0" max="100" class="form-control" aria-describedby="textHelpBlock" required="required"> 
                                     <span id="textHelpBlock" class="form-text text-muted">Do not include impairment in functioning due to physical (or environmental) limitations.</span>
                                 </div>
@@ -1392,6 +1392,13 @@
             var form = $('form'); 
             // let the browser natively reset defaults
             form[0].reset();
+        });
+
+        $("#image1_link").on('click', function(event) {
+            event.preventDefault();
+            let url = '/static/images/continuum.png'
+            let win = window.open(url, '_blank');
+            win.focus();
         });
 
         </script>
