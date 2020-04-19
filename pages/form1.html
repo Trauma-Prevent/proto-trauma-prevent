@@ -1340,13 +1340,27 @@
 
         <script>
 
+            let data = {}
+
             $(window).bind("pageshow", function() {
                 var form = $('form'); 
                 // let the browser natively reset defaults
                 form[0].reset();
+
+                if (typeof $.cookie('data') === 'undefined'){
+                    //create cookie
+                    $.cookie("data", JSON.stringify(data), { expires : 1 });
+                } else {
+                    data = JSON.parse($.cookie("data"));
+                }
+                for (key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        document.q1[key].value = data[key]
+                    }
+                }
+
             });
 
-            let data = {}
             if (typeof $.cookie('data') === 'undefined'){
                 //create cookie
                 $.cookie("data", JSON.stringify(data), { expires : 1 });
