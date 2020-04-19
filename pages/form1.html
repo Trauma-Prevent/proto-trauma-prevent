@@ -1340,6 +1340,12 @@
 
         <script>
 
+            $(window).bind("pageshow", function() {
+                var form = $('form'); 
+                // let the browser natively reset defaults
+                form[0].reset();
+            });
+
             let data = {}
             if (typeof $.cookie('data') === 'undefined'){
                 //create cookie
@@ -1387,12 +1393,6 @@
                 $.cookie("data", JSON.stringify(data), { expires : 1 });
                 check_empty()
             });
-
-        $(window).bind("pageshow", function() {
-            var form = $('form'); 
-            // let the browser natively reset defaults
-            form[0].reset();
-        });
 
         $("#image1_link").on('click', function(event) {
             event.preventDefault();
