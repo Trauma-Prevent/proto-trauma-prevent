@@ -20,10 +20,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
-img {
-    width:50%;
-    margin:5%;
-}
+    img {
+        width:50%;
+        margin:5%;
+    }
     .form-title {
         padding-top:5%;
         text-align:center;
@@ -60,13 +60,16 @@ img {
                 </p>
             </div>
         </header>
+        <div style='display:flex; justify-content: center;'>
+            <button id="empty" style='align-self:flex-center' class="btn btn-danger" onclick='remove_cookie()'>Reset form</button>
+        </div>
 
         <section id="main">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
 
-                        <form method="POST">
+                        <form id="q1" name="q1" method="POST">
 
                             <h4 class="form-title" style="margin-top:-10%;">Who are you and risk factor of trauma consequences?</h3>
                             <hr>
@@ -160,7 +163,7 @@ img {
                                         <label for="radio_1_1" class="custom-control-label">2</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="radio_1" id="radio_1_2" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="3" checked="checked"> 
+                                        <input name="radio_1" id="radio_1_2" type="radio" aria-describedby="radio_1HelpBlock" class="custom-control-input" value="3"> 
                                         <label for="radio_1_2" class="custom-control-label">3</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
@@ -1286,8 +1289,20 @@ img {
                                 </div>
                             </div>
 
+                            <div style="border:none;padding-bottom:0;" class="form-group row" style="border:none;">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <!-- Default unchecked -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input required="required" name="privacy" type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                        <label class="custom-control-label" for="defaultUnchecked">I agree to <a href="/privacy">Privacy Policy</a></label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group row" style="border:none;">
                                 <div class="offset-4 col-8">
+                                    <!-- Default unchecked -->
                                     <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
                                 </div>
                             </div>
@@ -1315,6 +1330,64 @@ img {
 
         <!-- Custom JavaScript for this theme -->
         <script src="js/scrolling-nav.js"></script>
+
+        <script>
+            jQuery = $ //quick fix
+        </script>
+
+        <!-- Jquery cookie plugin -->
+        <script src="jquery.cookie.js"></script>
+
+        <script>
+
+            let data = {}
+            if (typeof $.cookie('data') === 'undefined'){
+                //create cookie
+                $.cookie("data", JSON.stringify(data), { expires : 1 });
+            } else {
+                data = JSON.parse($.cookie("data"));
+            }
+            for (key in data) {
+                if (data.hasOwnProperty(key)) {
+                    document.q1[key].value = data[key]
+                }
+            }
+
+            check_empty = function() {
+                let count = 0
+                for (key in data) {
+                    if (data[key]){
+                        count++
+                    }
+                }
+                if(count) {
+                    document.getElementById('empty').style.display = 'block'
+                } else {
+                    document.getElementById('empty').style.display = 'none'
+                }
+            }
+
+            remove_cookie = function() {
+                $.removeCookie('data');
+                for (key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        document.q1[key].value = ''
+                    }
+                }
+                data = {}
+                check_empty()
+            }
+
+            check_empty()
+
+            $('#q1').change(function(event){
+                let el = event.target
+                let name = el.name
+                data[name] = el.value
+                $.cookie("data", JSON.stringify(data), { expires : 1 });
+                check_empty()
+            });
+        </script>
 
     </body>
 

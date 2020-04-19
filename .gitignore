@@ -114,3 +114,6 @@ tags*
 
 # going yarn
 package-lock.json
+
+# MACOXS crap
+.DS_Store
