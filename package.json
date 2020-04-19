@@ -6,14 +6,17 @@
   "scripts": {
     "install-deps": "cd lib/tetris; yarn install; cd ../../;yarn install",
     "build-local": "cd lib/tetris && npm run build && cp build/index.html ../../pages/tetris.html",
-    "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "start": "DATABASE_URL=$(heroku config:get DATABASE_URL -a proto-trauma-tetris) node index.js",
+    "start-dev": "DATABASE_URI=postgres://$(whoami):@localhost:5432/postgres nodemon index.js"
   },
   "author": "Guillaume Ferron",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
-    "pg": "^8.0.2"
+    "pg": "^8.0.2",
+    "sequelize": "^5.21.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
