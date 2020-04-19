@@ -22,6 +22,7 @@ app.get("/", (req, res, next) => { // should stay here in current state
 });
 
 app.use('/static/', express.static(__dirname+'/static'));
+app.use('/', express.static(__dirname+'/lib/carhartl-jquery-cookie-92b7715'));
 app.use('/', express.static(__dirname+'/lib/bootstrap-page'));
 app.use('/', express.static(__dirname+'/lib/tetris/build'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -79,6 +80,14 @@ app.post("/login", (req, res) =>{
     });
 })
 
+app.get("/privacy", (req, res, next) => {
+    if(!req.user) {
+        res.status(401).redirect("/login");
+    } else {
+        res.status(200).sendFile('pages/privacy.html', { root: __dirname });
+    }
+});
+
 app.get("/page1", (req, res, next) => {
     if(!req.user) {
         res.status(401).redirect("/login");
@@ -91,6 +100,7 @@ app.post('/page1', (req, res) => {
     if(!req.user) {
         res.status(401).redirect("/login");
     } else {
+        console.log(req)
         res.status(200).redirect('/page2')
     }
 });
