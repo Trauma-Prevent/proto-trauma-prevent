@@ -92,6 +92,9 @@ app.get("/page1", (req, res, next) => {
     if(!req.user) {
         res.status(401).redirect("/login");
     } else {
+        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+        res.setHeader("Pragma", "no-cache")
+        res.setHeader("Expires", "0")
         res.status(200).sendFile('pages/form1.html', { root: __dirname });
     }
 });
@@ -100,8 +103,14 @@ app.post('/page1', (req, res) => {
     if(!req.user) {
         res.status(401).redirect("/login");
     } else {
-        console.log(req)
-        res.status(200).redirect('/page2')
+        db.saveForm1(req.user.email, req.body)
+            .then(() => {
+                res.clearCookie('data');
+                res.status(200).redirect('/page2')
+            }, () => {
+                res.status(400).redirect('/page1') //stay the same but ensure reload (then people know something wrong happened)
+                //res.status(400).sendFile('pages/form1.html', { root: __dirname });
+            });
     }
 });
 
