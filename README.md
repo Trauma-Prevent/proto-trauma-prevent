@@ -2,7 +2,13 @@
 Simple prototype visant à illustrer le concept et peut-être fournir une première solution déployée
 
 ```
-npm install
-npm run build
-npm start
+yarn install
+yarn build
+yarn build-deb
+
+### Development
+yarn run start-dev
+
+### Production (Heroku)
+yarn start
 ```
