@@ -4,11 +4,7 @@ const crypto = require('crypto');
 const Sequelize = require('sequelize');
 // const sequelize = new Sequelize(process.env.DATABASE_URI);
 const sequelize = new Sequelize(process.env.HEROKU_DATABASE_URL, {
-    dialect:  'postgres',
-    protocol: 'postgres',
-    port:     match[4],
-    host:     match[3],
-    logging:  true //false
+    dialect:  'postgres'
 })
 const db = require('./db.model')
 
