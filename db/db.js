@@ -3,7 +3,7 @@ SALTA=1
 const crypto = require('crypto');
 const Sequelize = require('sequelize');
 // const sequelize = new Sequelize(process.env.DATABASE_URI);
-const sequelize = new Sequelize(process.env.HEROKU_DATABASE_URL, {
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect:  'postgres'
 })
 const db = require('./db.model')
