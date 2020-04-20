@@ -39,6 +39,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/admin", (req, res) =>{
+    res.status(200).sendFile('pages/admin/home.html', { root: __dirname });
+})
+
 app.get("/login", (req, res) =>{
     res.status(200).sendFile('pages/login.html', { root: __dirname });
 })
