@@ -2,7 +2,7 @@
 const moment = require('moment');
 const crypto = require('crypto');
 const Sequelize = require('sequelize');
-// const sequelize = new Sequelize(process.env.DATABASE_URI);
+// const sequelize = new Sequelize(process.env.DATABASE_URL);
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect:  'postgres',
     //logging: false
@@ -95,7 +95,7 @@ module.exports = {
                 })
         })
     },
-    saveForm1: function(email, data) {
+    saveForm0: function(email, data) {
 
         delete data['submit'] //could be better
 
@@ -114,13 +114,60 @@ module.exports = {
                             let user_id = user.id
                             let date = moment()
                             if (user_id) {
-                                const Form1 = db.form1(data)
-                                Form1.sync({ alter: true })
+                                const Form0 = db.form0(data)
+                                Form0.sync({ alter: true })
                                 data['user_id'] = user_id
                                 data['date'] = date
 
+                                Form0.create(data).then((result) => {
+                                    resolve(results[0].id)
+                                }, () => {
+                                    reject()
+                                });
+
+                            } else {
+                                reject()
+                            }
+                        } else {
+                            reject()
+                        }
+                    })
+                    //.catch(error => res.status(400).json({error}));;
+                }, {
+                    // options
+                })
+                .catch(err => {
+                    reject();
+                    console.error('Unable to connect to the database:', err);
+                })
+        })
+    },
+    saveForm1: function(form0_id, data) {
+
+        delete data['submit'] //could be better
+
+        return new Promise(function(resolve, reject) {
+            sequelize
+                .authenticate()
+                .then(() => {
+
+                    db.form0().findAll({
+                        where: {
+                            id: form0_id
+                        }
+                    }).then((results) => {            
+                        const form0 = results[0]
+                        if(form0) {
+                            let form0_id = form0.id
+                            let date = moment()
+                            if (form0_id) {
+                                const Form1 = db.form1(data)
+                                Form1.sync({ alter: true })
+                                data['form0_id'] = form0_id
+                                data['date'] = date
+
                                 Form1.create(data).then((result) => {
-                                    resolve()
+                                    resolve(results[0].id)
                                 }, () => {
                                     reject()
                                 });

@@ -64,12 +64,12 @@ app.post("/login", (req, res) =>{
     .then(() => {
         const authToken = generateAuthToken();
         // Store authentication token
-        const user = {email: email};
+        const user = {email: email, form0: -1, form1: -1};
         authTokens[authToken] = user;
         // Setting the auth token in cookies
         res.cookie('AuthToken', authToken);
         // Redirect user to the protected page
-        res.status(200).redirect('/page1');
+        res.status(200).redirect('/page0');
     }, () => {
         res.status(400).sendFile('pages/login.html', { root: __dirname });
         // FIX ME : need pug-boostrap or ejs (or similar)
@@ -88,13 +88,69 @@ app.get("/privacy", (req, res, next) => {
     }
 });
 
+app.get("/page0", (req, res, next) => {
+    if(!req.user) {
+        res.status(401).redirect("/login");
+    } else {
+        //res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+        //res.setHeader("Pragma", "no-cache")
+        //res.setHeader("Expires", "0")
+        res.status(200).sendFile('pages/form0.html', { root: __dirname });
+    }
+});
+
+app.post('/page0', (req, res) => {
+    if(!req.user) {
+        res.status(401).redirect("/login");
+    } else {
+
+        pass = true 
+
+        //make pass false
+        if (req.body['age'] < 18)
+            pass = !pass
+
+        else if (req.body['suicidal'] != "0")
+            pass = !pass
+
+        else if (req.body['followsup'] != "0")
+            pass = !pass
+
+        else if (req.body['physfamiltrauma'] != "0")
+            pass = !pass
+
+        else if (req.body['privacy'] != "on")
+            pass = !pass
+
+        console.log(req.body)
+        console.log(pass)
+        if (pass) {
+
+            db.saveForm0(req.user.email, req.body)
+                .then((form0_id) => {
+                    res.clearCookie('data');
+                    req.user.form0 = form0_id
+                    res.status(200).redirect('/page1')
+                }, () => {
+                    res.status(400).redirect('/page0') //stay the same but ensure reload (then people know something wrong happened)
+                });
+
+        } else {
+            res.clearCookie('data');
+            file = 'pages/tau.html'
+            res.status(200).sendFile(file, { root: __dirname });
+        }
+    }
+});
+
+
 app.get("/page1", (req, res, next) => {
     if(!req.user) {
         res.status(401).redirect("/login");
     } else {
-        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
-        res.setHeader("Pragma", "no-cache")
-        res.setHeader("Expires", "0")
+        //res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+        //res.setHeader("Pragma", "no-cache")
+        //res.setHeader("Expires", "0")
         res.status(200).sendFile('pages/form1.html', { root: __dirname });
     }
 });
@@ -103,13 +159,13 @@ app.post('/page1', (req, res) => {
     if(!req.user) {
         res.status(401).redirect("/login");
     } else {
-        db.saveForm1(req.user.email, req.body)
-            .then(() => {
+        db.saveForm1(req.user.form0, req.body)
+            .then((form1_id) => {
                 res.clearCookie('data');
+                req.user.form01 = form1_id
                 res.status(200).redirect('/page2')
             }, () => {
                 res.status(400).redirect('/page1') //stay the same but ensure reload (then people know something wrong happened)
-                //res.status(400).sendFile('pages/form1.html', { root: __dirname });
             });
     }
 });
