@@ -18,7 +18,11 @@
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "pg": "^8.0.2",
-    "sequelize": "^5.21.6"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "sequelize": "^5.21.6",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
