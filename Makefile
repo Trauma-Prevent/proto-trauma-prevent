@@ -4,11 +4,12 @@ start: build
 	docker-compose up
 
 build: install
-	yarn run build
 	yarn run build-dep
+	yarn run build
 	
 install: 
 	yarn install
+	yarn run install-deps
 
 run: build
 	yarn start
