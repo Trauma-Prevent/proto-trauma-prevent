@@ -1,0 +1,19 @@
+version: "2"
+services:
+  app:
+    build: docker/app
+    env_file: .env
+    volumes:
+      - ./:/opt/app
+    ports:
+      - "8081:80"
+    command: "make run"
+    links:
+      - db
+  db:
+    image: postgres
+    env_file: .env
+  adminer:
+    image: adminer
+    ports:
+      - 8083:8080
