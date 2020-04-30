@@ -10,12 +10,15 @@ Pour lancer les services, il suffit de taper la commande suivante dans un termin
 
 `make start`
 
-Autres commanades:
+* Autres commandes:
 - `make restart` & `make restart_force`: pour relancr les containers (la 2eme commande force la reconstruction)
 - `make run`: lance l'application directement (utlise dans les container)
 - `make clean`: pour nettoyer les fichiers generes par l'install et le build
 - `make install`: installation des dependances
 - `make build`: build de l'app Tetris
+
+* Fichier d'environnement: 
+Un fichier pour configurer certaines variables d'environnement devra etre cree manuellement, il devra se nommer `.env` (utiliser le modele de fichier `.env.dist`)
 
 ### Production (Heroku)
 yarn start
