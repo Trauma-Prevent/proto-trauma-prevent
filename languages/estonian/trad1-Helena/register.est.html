@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="Trauma Tetris, web prototype" content="">
+        <meta name="Guillaume Ferron" content="">
+
+        <title>Trauma Tetris</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+
+        <!-- Font Awesome CDN (may break) #TODO -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+          .flex-container {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+          }
+        </style>
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <header class="bg-primary text-white">
+            <div class="container text-center">
+                <h1>Registreerimisleht</h1>
+            </div>
+        </header>
+
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+
+                        <form action="/register" method="post">
+                            <div class="form-group row">
+                                <label class="col-2" for="email">Meiliaadress: </label>
+                                <div class="col-12">
+
+                                    <input id="email" name="email" placeholder="Enter your email adress" type="text" aria-describedby="pseudoHelpBlock" required="required" class="form-control"> 
+                                    <span id="pseudoHelpBlock" class="form-text text-muted">Palun sisesta meiliaadress juhuks, kui Sul endal või meil on vaja Su andmeid välja otsida!</span>
+                                    <p class="form-text text-muted">  Et Su tõelist identiteeti paremini kaitsta, soovitame Sul luua eraldi meiliaadressi pseudonüümiga, mitte kasutada oma päris nime. Inglisekeelse juhise tasuta meiliaadressi loomiseks leiad siit:<a href="https://www.wikihow.com/Make-an-Email-Address-for-Free"></a></p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="login">Salasõna: </label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter a password">
+                                <!-- toggle between password visibility -->
+                                <input type="checkbox" onclick="toggle()"><span style="font-size:0.8em; margin-left:10px;">Näita salasõna</span>
+                                <span id="pseudoHelpBlock" class="form-text text-muted">Palun sisesta tugev salasõna, et luua endale kasutaja!</span>
+                            </div>
+                            <div class="form-group">
+                                <div class="flex-container">
+                                    <button type="submit" class="btn btn-primary">Registreeri</button>
+                                    <a style="margin-left: auto;" href="/login">Tagasi sisselogimise lehele</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white"><a href="https://github.com/guillaumefe/proto-trauma-tetris">Source code</a></p>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom JavaScript for this theme -->
+        <script src="js/scrolling-nav.js"></script>
+
+        <!-- Toggle password visibility -->
+        <script>
+            function toggle() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

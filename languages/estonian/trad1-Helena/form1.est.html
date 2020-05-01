@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="Trauma Tetris, web prototype" content="">
+        <meta name="Guillaume Ferron, Thomas Gargot" content="">
+
+        <title>Trauma Prevent</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+
+        <!-- Font Awesome CDN (may break) #TODO -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+    img {
+        width:50%;
+        margin:5%;
+    }
+    .form-title {
+        padding-top:5%;
+        text-align:center;
+        color: #333;
+    }
+    .form-subtitle {
+        text-align:center;
+        color: gray;
+    }
+    .row {
+        padding:4%;
+        border-bottom: 1px #F1F1F1 solid;
+    }
+    hr {
+        color: #F2F2F2
+    }
+    section {
+        margin-top:-7%;
+    }
+
+        </style>
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <header class="bg-primary text-white">
+            <div class="container text-center">
+                <h1>COVID-19 pandeemiaga seotud traumast tingitud </h1>
+                <h1>posttraumaatilise stressihäire ennetamine</h1>
+                <p class="lead">
+                Lihtne ja lühike digisekkumine, mis põhineb neuroteadustel.
+                </p>
+            </div>
+        </header>
+        <div style='display:flex; justify-content: center;'>
+            <button id="empty" style='align-self:flex-center; display:none;' class="btn btn-danger" onclick='remove_cookie()'>Lähtesta vorm</button>
+        </div>
+
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+
+                        <form id="q1" name="q1" method="POST">
+
+                            <h4 class="form-title" style="margin-top:-10%;">Kes Sa oled ja millised on Su riskitegurid trauma tagajärgede tekkeks?</h3>
+                            <hr>
+
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <input id="age" name="age" placeholder="Enter your age" type="number" min="0" max="120" aria-describedby="ageHelpBlock" required="required" class="form-control"> 
+                                    <span id="ageHelpBlock" class="form-text text-muted">Kui vana Sa oled?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <select id="gender" name="gender" aria-describedby="genderHelpBlock" required="required" class="custom-select">
+                                        <option disabled selected value> -- vali variant -- </option>
+                                        <option value="1">Mees</option>
+                                        <option value="2">Naine</option>
+                                        <option value="3">Muu</option>
+                                    </select> 
+                                    <span id="genderHelpBlock" class="form-text text-muted">Millisest soost Sa oled?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <select id="education" name="education" aria-describedby="educationHelpBlock" required="required" class="custom-select">
+                                        <option disabled selected value> -- vali variant -- </option>
+                                        <option value="1">Põhiharidus või vähem</option>
+                                        <option value="2">Keskharidus</option>
+                                        <option value="3">Kõrgharidus</option>
+                                    </select> 
+                                    <span id="educationHelpBlock" class="form-text text-muted">Milline on Su kõrgeim haridustase?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <select id="trauma" name="trauma" aria-describedby="traumaHelpBlock" required="required" class="custom-select">
+                                        <option disabled selected value> -- vali variant -- </option>
+                                        <option value="1">Ei</option>
+                                        <option value="2">Jah, aga see ei olnud teise inimese poolt tahtlikult põhjustatudtud</option>
+                                        <option value="3">Jah, see oli teise inimese poolt tahtlikult põhjustatud</option>
+                                    </select> 
+                                    <span id="traumaHelpBlock" class="form-text text-muted">Kas Sul on varem olnud mõni varasem traumaatiline kogemus?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <select id="trauma_desc" name="trauma_desc" aria-describedby="trauma_descHelpBlock" class="custom-select" required="required">
+                                        <option disabled selected value> -- vali variant -- </option>
+                                        <option value="1">Tajusin otsest ohtu oma elule</option>
+                                        <option value="2">Tajusin otsest ohtu kellegi teise elule</option>
+                                        <option value="3">Mitte kumbki neist</option>
+                                    </select> 
+                                    <span id="trauma_descHelpBlock" class="form-text text-muted">Kuidas kirjeldaksid hiljuti kogetud traumat?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <input id="trauma_num" name="daily_intrusive_memories" placeholder="Enter a number" type="number" aria-describedby="trauma_numHelpBlock" class="form-control" required="required"> 
+                                    <span id="trauma_numHelpBlock" class="form-text text-muted">Mitu korda kogesid eile pealetungivaid mälestusi traumast?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <span id="textHelpBlock" class="form-text text-muted">Kuidas hindaksid oma praegust psühholoogilist toimetulekut? Võta arvesse oma vaimne, sotsiaalne ja tööalane toimetulek ning paiguta end kujuteldavale skaalale, mille ühes otsas on vaimne tervis ja teises vaimne haigus!</span>
+                                    <a id="image1_link" href="#"><img id="image1" src="/static/images/continuum.png" />
+                                    <span>View</span></a>
+                                    <input id="text" name="gaf.J0" placeholder="Enter a number between 0 and 100" type="number" min="0" max="100" class="form-control" aria-describedby="textHelpBlock" required="required"> 
+                                    <span id="textHelpBlock" class="form-text text-muted">Ära võta arvesse toimetuleku langust, mis on põhjustatud kehalistest (või keskkondlikest) piirangutest!</span>
+                                </div>
+                            </div>
+
+                            <h4 class="form-title">Allpool on toodud loetelu problemidest ja kaebustest, mis võivad esineda mõnedel inimestel pärast traumaatilist elukogemust. Palun lugege neid tähelepanelikult ja valige variant, mis vastab sellele, kui palju see probleem Sind pärast trauma kogemist vaevas:</h3>
+                            <h5 class="form-subtitle">(1: Üldse mitte - 5: Väga palju) (PCL-5)</h5>
+                            <hr>
+
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.1" id="PCL-5.J0.1_0" type="radio" aria-describedby="PCL-5.J0.1HelpBlock" class="custom-control-input" value="1"> 
+                                        <label for="PCL-5.J0.1_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.1" id="PCL-5.J0.1_1" type="radio" aria-describedby="PCL-5.J0.1HelpBlock" class="custom-control-input" value="2"> 
+                                        <label for="PCL-5.J0.1_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.1" id="PCL-5.J0.1_2" type="radio" aria-describedby="PCL-5.J0.1HelpBlock" class="custom-control-input" value="3"> 
+                                        <label for="PCL-5.J0.1_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.1" id="PCL-5.J0.1_3" type="radio" aria-describedby="PCL-5.J0.1HelpBlock" class="custom-control-input" value="4"> 
+                                        <label for="PCL-5.J0.1_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.1" id="PCL-5.J0.1_4" type="radio" aria-describedby="PCL-5.J0.1HelpBlock" class="custom-control-input" value="5"> 
+                                        <label for="PCL-5.J0.1_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.1HelpBlock" class="form-text text-muted">Korduvad ja häirivad meenutused, mõtted või kujutlused traumeerivast sündmusest</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.2" id="PCL-5.J0.2_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.2HelpBlock"> 
+                                        <label for="PCL-5.J0.2_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.2" id="PCL-5.J0.2_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.2HelpBlock"> 
+                                        <label for="PCL-5.J0.2_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.2" id="PCL-5.J0.2_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.2HelpBlock"> 
+                                        <label for="PCL-5.J0.2_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.2" id="PCL-5.J0.2_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.2HelpBlock"> 
+                                        <label for="PCL-5.J0.2_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.2" id="PCL-5.J0.2_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.2HelpBlock"> 
+                                        <label for="PCL-5.J0.2_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.2HelpBlock" class="form-text text-muted">Korduvad ja häirivad unenäod traumeerivast sündmusest?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.3" id="PCL-5.J0.3_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.3HelpBlock"> 
+                                        <label for="PCL-5.J0.3_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.3" id="PCL-5.J0.3_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.3HelpBlock"> 
+                                        <label for="PCL-5.J0.3_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.3" id="PCL-5.J0.3_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.3HelpBlock"> 
+                                        <label for="PCL-5.J0.3_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.3" id="PCL-5.J0.3_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.3HelpBlock"> 
+                                        <label for="PCL-5.J0.3_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.3" id="PCL-5.J0.3_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.3HelpBlock"> 
+                                        <label for="PCL-5.J0.3_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.3HelpBlock" class="form-text text-muted">Äkiline tunne või tegutsemine, nagu traumeeriv sündmus oleks taas toimumas?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.4" id="PCL-5.J0.4_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.4HelpBlock"> 
+                                        <label for="PCL-5.J0.4_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.4" id="PCL-5.J0.4_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.4HelpBlock"> 
+                                        <label for="PCL-5.J0.4_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.4" id="PCL-5.J0.4_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.4HelpBlock"> 
+                                        <label for="PCL-5.J0.4_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.4" id="PCL-5.J0.4_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.4HelpBlock"> 
+                                        <label for="PCL-5.J0.4_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.4" id="PCL-5.J0.4_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.4HelpBlock"> 
+                                        <label for="PCL-5.J0.4_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.4HelpBlock" class="form-text text-muted">Tugev erutus, kui miski meenutab Sulle traumeeriva sündmuse kogemust</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.5" id="PCL-5.J0.5_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.5HelpBlock"> 
+                                        <label for="PCL-5.J0.5_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.5" id="PCL-5.J0.5_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.5HelpBlock"> 
+                                        <label for="PCL-5.J0.5_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.5" id="PCL-5.J0.5_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.5HelpBlock"> 
+                                        <label for="PCL-5.J0.5_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.5" id="PCL-5.J0.5_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.5HelpBlock"> 
+                                        <label for="PCL-5.J0.5_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.5" id="PCL-5.J0.5_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.5HelpBlock"> 
+                                        <label for="PCL-5.J0.5_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.5HelpBlock" class="form-text text-muted">Kehalised reaktsioonid (nt südamekloppimine, hingamisraskused, higistamine), kui miski tuletab Sulle meelde traumaatilise sündmuse kogemust</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.6" id="PCL-5.J0.6_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.6HelpBlock"> 
+                                        <label for="PCL-5.J0.6_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.6" id="PCL-5.J0.6_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.6HelpBlock"> 
+                                        <label for="PCL-5.J0.6_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.6" id="PCL-5.J0.6_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.6HelpBlock"> 
+                                        <label for="PCL-5.J0.6_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.6" id="PCL-5.J0.6_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.6HelpBlock"> 
+                                        <label for="PCL-5.J0.6_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.6" id="PCL-5.J0.6_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.6HelpBlock"> 
+                                        <label for="PCL-5.J0.6_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.6HelpBlock" class="form-text text-muted">Traumeerimast kogemusest mõtlemise või rääkimise või sellega seotud tunnete vältimine</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.7" id="PCL-5.J0.7_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.7HelpBlock"> 
+                                        <label for="PCL-5.J0.7_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.7" id="PCL-5.J0.7_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.7HelpBlock"> 
+                                        <label for="PCL-5.J0.7_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.7" id="PCL-5.J0.7_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.7HelpBlock"> 
+                                        <label for="PCL-5.J0.7_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.7" id="PCL-5.J0.7_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.7HelpBlock"> 
+                                        <label for="PCL-5.J0.7_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.7" id="PCL-5.J0.7_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.7HelpBlock"> 
+                                        <label for="PCL-5.J0.7_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.7HelpBlock" class="form-text text-muted"> Toimingute või olukordade vältimine, mis meenutavad Sulle traumeeriva sündmuse kogemust (näiteks inimesed, kohad, vestlused, tegevused, asjad, olukorrad)</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.8" id="PCL-5.J0.8_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.8HelpBlock"> 
+                                        <label for="PCL-5.J0.8_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.8" id="PCL-5.J0.8_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.8HelpBlock"> 
+                                        <label for="PCL-5.J0.8_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.8" id="PCL-5.J0.8_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.8HelpBlock"> 
+                                        <label for="PCL-5.J0.8_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.8" id="PCL-5.J0.8_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.8HelpBlock"> 
+                                        <label for="PCL-5.J0.8_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.8" id="PCL-5.J0.8_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.8HelpBlock"> 
+                                        <label for="PCL-5.J0.8_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.8HelpBlock" class="form-text text-muted">Traumeeriva sündmuse kogemuse oluliste osade meenutamise raskused?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.9" id="PCL-5.J0.9_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.9HelpBlock"> 
+                                        <label for="PCL-5.J0.9_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.9" id="PCL-5.J0.9_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.9HelpBlock"> 
+                                        <label for="PCL-5.J0.9_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.9" id="PCL-5.J0.9_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.9HelpBlock"> 
+                                        <label for="PCL-5.J0.9_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.9" id="PCL-5.J0.9_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.9HelpBlock"> 
+                                        <label for="PCL-5.J0.9_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.9" id="PCL-5.J0.9_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.9HelpBlock"> 
+                                        <label for="PCL-5.J0.9_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.9HelpBlock" class="form-text text-muted">Tugevad negatiivsed uskumused enda, teiste inimeste või maailma kohta (näiteks mõtted nagu: ma olen halb, minuga on midagi tõsiselt valesti, kedagi ei saa usaldada, maailm on täiesti ohtlik paik)</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.10" id="PCL-5.J0.10_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.10HelpBlock"> 
+                                        <label for="PCL-5.J0.10_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.10" id="PCL-5.J0.10_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.10HelpBlock"> 
+                                        <label for="PCL-5.J0.10_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.10" id="PCL-5.J0.10_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.10HelpBlock"> 
+                                        <label for="PCL-5.J0.10_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.10" id="PCL-5.J0.10_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.10HelpBlock"> 
+                                        <label for="PCL-5.J0.10_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.10" id="PCL-5.J0.10_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.10HelpBlock"> 
+                                        <label for="PCL-5.J0.10_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.10HelpBlock" class="form-text text-muted">Enese või kellegi teise süüdistamine traumeerivas sündmuses või selles, mis traumale järgnes</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.11" id="PCL-5.J0.11_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.11HelpBlock"> 
+                                        <label for="PCL-5.J0.11_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.11" id="PCL-5.J0.11_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.11HelpBlock"> 
+                                        <label for="PCL-5.J0.11_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.11" id="PCL-5.J0.11_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.11HelpBlock"> 
+                                        <label for="PCL-5.J0.11_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.11" id="PCL-5.J0.11_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.11HelpBlock"> 
+                                        <label for="PCL-5.J0.11_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.11" id="PCL-5.J0.11_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.11HelpBlock"> 
+                                        <label for="PCL-5.J0.11_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.11HelpBlock" class="form-text text-muted">Tugevate negatiivsete emotsioonide kogemine nagu hirm, õudus, viha, süü või häbi</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.12" id="PCL-5.J0.12_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.12HelpBlock"> 
+                                        <label for="PCL-5.J0.12_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.12" id="PCL-5.J0.12_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.12HelpBlock"> 
+                                        <label for="PCL-5.J0.12_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.12" id="PCL-5.J0.12_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.12HelpBlock"> 
+                                        <label for="PCL-5.J0.12_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.12" id="PCL-5.J0.12_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.12HelpBlock"> 
+                                        <label for="PCL-5.J0.12_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.12" id="PCL-5.J0.12_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.12HelpBlock"> 
+                                        <label for="PCL-5.J0.12_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.12HelpBlock" class="form-text text-muted">Huvi kadumine asjade vastu, mis on Sulle tavaliselt meeldinud?</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.13" id="PCL-5.J0.13_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.13HelpBlock"> 
+                                        <label for="PCL-5.J0.13_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.13" id="PCL-5.J0.13_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.13HelpBlock"> 
+                                        <label for="PCL-5.J0.13_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.13" id="PCL-5.J0.13_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.13HelpBlock"> 
+                                        <label for="PCL-5.J0.13_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.13" id="PCL-5.J0.13_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.13HelpBlock"> 
+                                        <label for="PCL-5.J0.13_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.13" id="PCL-5.J0.13_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.13HelpBlock"> 
+                                        <label for="PCL-5.J0.13_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.13HelpBlock" class="form-text text-muted">Tunne, et oled teistest inimestest eemaldunud või ära lõigatud</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.14" id="PCL-5.J0.14_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.14HelpBlock"> 
+                                        <label for="PCL-5.J0.14_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.14" id="PCL-5.J0.14_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.14HelpBlock"> 
+                                        <label for="PCL-5.J0.14_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.14" id="PCL-5.J0.14_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.14HelpBlock"> 
+                                        <label for="PCL-5.J0.14_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.14" id="PCL-5.J0.14_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.14HelpBlock"> 
+                                        <label for="PCL-5.J0.14_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.14" id="PCL-5.J0.14_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.14HelpBlock"> 
+                                        <label for="PCL-5.J0.14_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.14HelpBlock" class="form-text text-muted">Emotsionaalne tuimus või võimetus tunda sooje tundeid oma lähedaste vastu</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.15" id="PCL-5.J0.15_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.15HelpBlock"> 
+                                        <label for="PCL-5.J0.15_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.15" id="PCL-5.J0.15_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.15HelpBlock"> 
+                                        <label for="PCL-5.J0.15_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.15" id="PCL-5.J0.15_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.15HelpBlock"> 
+                                        <label for="PCL-5.J0.15_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.15" id="PCL-5.J0.15_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.15HelpBlock"> 
+                                        <label for="PCL-5.J0.15_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.15" id="PCL-5.J0.15_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.15HelpBlock"> 
+                                        <label for="PCL-5.J0.15_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.15HelpBlock" class="form-text text-muted">Ärrituvus, vihahood või agressiivne käitumine</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.16" id="PCL-5.J0.16_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.16HelpBlock"> 
+                                        <label for="PCL-5.J0.16_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.16" id="PCL-5.J0.16_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.16HelpBlock"> 
+                                        <label for="PCL-5.J0.16_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.16" id="PCL-5.J0.16_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.16HelpBlock"> 
+                                        <label for="PCL-5.J0.16_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.16" id="PCL-5.J0.16_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.16HelpBlock"> 
+                                        <label for="PCL-5.J0.16_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.16" id="PCL-5.J0.16_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.16HelpBlock"> 
+                                        <label for="PCL-5.J0.16_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.16HelpBlock" class="form-text text-muted">Liigne riskide võtmine või asjade tegemine, mis võivad Sind kahjustada</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.17" id="PCL-5.J0.17_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.17HelpBlock"> 
+                                        <label for="PCL-5.J0.17_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.17" id="PCL-5.J0.17_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.17HelpBlock"> 
+                                        <label for="PCL-5.J0.17_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.17" id="PCL-5.J0.17_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.17HelpBlock"> 
+                                        <label for="PCL-5.J0.17_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.17" id="PCL-5.J0.17_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.17HelpBlock"> 
+                                        <label for="PCL-5.J0.17_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.17" id="PCL-5.J0.17_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.17HelpBlock"> 
+                                        <label for="PCL-5.J0.17_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.17HelpBlock" class="form-text text-muted">Ülivalvsus või ohuootus</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.18" id="PCL-5.J0.18_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.18HelpBlock"> 
+                                        <label for="PCL-5.J0.18_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.18" id="PCL-5.J0.18_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.18HelpBlock"> 
+                                        <label for="PCL-5.J0.18_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.18" id="PCL-5.J0.18_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.18HelpBlock"> 
+                                        <label for="PCL-5.J0.18_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.18" id="PCL-5.J0.18_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.18HelpBlock"> 
+                                        <label for="PCL-5.J0.18_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.18" id="PCL-5.J0.18_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.18HelpBlock"> 
+                                        <label for="PCL-5.J0.18_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.18HelpBlock" class="form-text text-muted">Kergesti ehmumine või võpatamine</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.19" id="PCL-5.J0.19_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.19HelpBlock"> 
+                                        <label for="PCL-5.J0.19_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.19" id="PCL-5.J0.19_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.19HelpBlock"> 
+                                        <label for="PCL-5.J0.19_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.19" id="PCL-5.J0.19_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.19HelpBlock"> 
+                                        <label for="PCL-5.J0.19_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.19" id="PCL-5.J0.19_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.19HelpBlock"> 
+                                        <label for="PCL-5.J0.19_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.19" id="PCL-5.J0.19_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.19HelpBlock"> 
+                                        <label for="PCL-5.J0.19_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.19HelpBlock" class="form-text text-muted">Keskendumisraskused</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.20" id="PCL-5.J0.20_0" type="radio" class="custom-control-input" value="1" aria-describedby="PCL-5.J0.20HelpBlock"> 
+                                        <label for="PCL-5.J0.20_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.20" id="PCL-5.J0.20_1" type="radio" class="custom-control-input" value="2" aria-describedby="PCL-5.J0.20HelpBlock"> 
+                                        <label for="PCL-5.J0.20_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.20" id="PCL-5.J0.20_2" type="radio" class="custom-control-input" value="3" aria-describedby="PCL-5.J0.20HelpBlock"> 
+                                        <label for="PCL-5.J0.20_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.20" id="PCL-5.J0.20_3" type="radio" class="custom-control-input" value="4" aria-describedby="PCL-5.J0.20HelpBlock"> 
+                                        <label for="PCL-5.J0.20_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PCL-5.J0.20" id="PCL-5.J0.20_4" type="radio" class="custom-control-input" value="5" aria-describedby="PCL-5.J0.20HelpBlock"> 
+                                        <label for="PCL-5.J0.20_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PCL-5.J0.20HelpBlock" class="form-text text-muted">Uinumisraskused</span>
+                                </div>
+                            </div>
+
+                            <h4 class="form-title">Milline number kirjeldab kõige paremini kogemusi, mis olid Sul kriitilise sündmuse ajal ja vahetult pärast seda?</h3>
+                            <h5 style="padding:0;" class="form-title">Kui väide ei käi üldse Sinu kogemuse kohta, <br> vali palun "üldse mitte"</h5>
+                            <h5 class="form-subtitle">(1: üldse mitte - 5: väga palju) (PDI)</h5>
+                            <hr>
+
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.1" id="PDI.J0.1_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.1HelpBlock"> 
+                                        <label for="PDI.J0.1_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.1" id="PCL-5.J0.1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.1HelpBlock"> 
+                                        <label for="PCL-5.J0.1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.1" id="PCL-5.J0.2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.1HelpBlock"> 
+                                        <label for="PCL-5.J0.2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.1" id="PDI.J0.1_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.1HelpBlock"> 
+                                        <label for="PDI.J0.1_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.1" id="PDI.J0.1_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.1HelpBlock"> 
+                                        <label for="PDI.J0.1_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.1HelpBlock" class="form-text text-muted">Tundsin end abituna.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.2" id="PDI.J0.2_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.2HelpBlock"> 
+                                        <label for="PDI.J0.2_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.2" id="PDI.J0.2_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.2HelpBlock"> 
+                                        <label for="PDI.J0.2_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.2" id="PDI.J0.2_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.2HelpBlock"> 
+                                        <label for="PDI.J0.2_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.2" id="PDI.J0.2_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.2HelpBlock"> 
+                                        <label for="PDI.J0.2_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.2" id="PDI.J0.2_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.2HelpBlock"> 
+                                        <label for="PDI.J0.2_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.2HelpBlock" class="form-text text-muted">Tundsin kurbust ja leina.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.3" id="PDI.J0.3_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.3HelpBlock"> 
+                                        <label for="PDI.J0.3_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.3" id="PDI.J0.3_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.3HelpBlock"> 
+                                        <label for="PDI.J0.3_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.3" id="PDI.J0.3_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.3HelpBlock"> 
+                                        <label for="PDI.J0.3_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.3" id="PDI.J0.3_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.3HelpBlock"> 
+                                        <label for="PDI.J0.3_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.3" id="PDI.J0.3_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.3HelpBlock"> 
+                                        <label for="PDI.J0.3_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.3HelpBlock" class="form-text text-muted">Tundsin pettumust või viha.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.4" id="PDI.J0.4_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.4HelpBlock"> 
+                                        <label for="PDI.J0.4_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.4" id="PDI.J0.4_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.4HelpBlock"> 
+                                        <label for="PDI.J0.4_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.4" id="PDI.J0.4_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.4HelpBlock"> 
+                                        <label for="PDI.J0.4_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.4" id="PDI.J0.4_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.4HelpBlock"> 
+                                        <label for="PDI.J0.4_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.4" id="PDI.J0.4_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.4HelpBlock"> 
+                                        <label for="PDI.J0.4_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.4HelpBlock" class="form-text text-muted">Kartsin oma turvalisuse pärast.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.5" id="PDI.J0.5_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.5HelpBlock"> 
+                                        <label for="PDI.J0.5_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.5" id="PDI.J0.5_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.5HelpBlock"> 
+                                        <label for="PDI.J0.5_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.5" id="PDI.J0.5_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.5HelpBlock"> 
+                                        <label for="PDI.J0.5_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.5" id="PDI.J0.5_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.5HelpBlock"> 
+                                        <label for="PDI.J0.5_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.5" id="PDI.J0.5_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.5HelpBlock"> 
+                                        <label for="PDI.J0.5_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.5HelpBlock" class="form-text text-muted">Tundsin end süüdi.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.6" id="PDI.J0.6_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.6HelpBlock"> 
+                                        <label for="PDI.J0.6_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.6" id="PDI.J0.6_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.6HelpBlock"> 
+                                        <label for="PDI.J0.6_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.6" id="PDI.J0.6_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.6HelpBlock"> 
+                                        <label for="PDI.J0.6_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.6" id="PDI.J0.6_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.6HelpBlock"> 
+                                        <label for="PDI.J0.6_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.6" id="PDI.J0.6_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.6HelpBlock"> 
+                                        <label for="PDI.J0.6_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.6HelpBlock" class="form-text text-muted">Tundsin häbi oma emotsionaalse reaktsiooni pärast.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.7" id="PDI.J0.7_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.7HelpBlock"> 
+                                        <label for="PDI.J0.7_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.7" id="PDI.J0.7_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.7HelpBlock"> 
+                                        <label for="PDI.J0.7_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.7" id="PDI.J0.7_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.7HelpBlock"> 
+                                        <label for="PDI.J0.7_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.7" id="PDI.J0.7_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.7HelpBlock"> 
+                                        <label for="PDI.J0.7_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.7" id="PDI.J0.7_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.7HelpBlock"> 
+                                        <label for="PDI.J0.7_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.7HelpBlock" class="form-text text-muted">Tundsin muret teiste turvalisuse pärast.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.8" id="PDI.J0.8_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.8HelpBlock"> 
+                                        <label for="PDI.J0.8_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.8" id="PDI.J0.8_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.8HelpBlock"> 
+                                        <label for="PDI.J0.8_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.8" id="PDI.J0.8_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.8HelpBlock"> 
+                                        <label for="PDI.J0.8_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.8" id="PDI.J0.8_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.8HelpBlock"> 
+                                        <label for="PDI.J0.8_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.8" id="PDI.J0.8_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.8HelpBlock"> 
+                                        <label for="PDI.J0.8_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.8HelpBlock" class="form-text text-muted">Tundsin, et hakkan kaotama kontrolli oma emotsioonide üle.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.9" id="PDI.J0.9_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.9HelpBlock"> 
+                                        <label for="PDI.J0.9_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.9" id="PDI.J0.9_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.9HelpBlock"> 
+                                        <label for="PDI.J0.9_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.9" id="PDI.J0.9_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.9HelpBlock"> 
+                                        <label for="PDI.J0.9_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.9" id="PDI.J0.9_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.9HelpBlock"> 
+                                        <label for="PDI.J0.9_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.9" id="PDI.J0.9_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.9HelpBlock"> 
+                                        <label for="PDI.J0.9_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.9HelpBlock" class="form-text text-muted">Mul oli raskusi oma soole ja põie kontrollimisega.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.10" id="PDI.J0.10_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.10HelpBlock"> 
+                                        <label for="PDI.J0.10_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.10" id="PDI.J0.10_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.10HelpBlock"> 
+                                        <label for="PDI.J0.10_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.10" id="PDI.J0.10_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.10HelpBlock"> 
+                                        <label for="PDI.J0.10_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.10" id="PDI.J0.10_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.10HelpBlock"> 
+                                        <label for="PDI.J0.10_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.10" id="PDI.J0.10_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.10HelpBlock"> 
+                                        <label for="PDI.J0.10_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.10HelpBlock" class="form-text text-muted">See, mida nägin, tekitas minus õudust.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.11" id="PDI.J0.11_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.11HelpBlock"> 
+                                        <label for="PDI.J0.11_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.11" id="PDI.J0.11_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.11HelpBlock"> 
+                                        <label for="PDI.J0.11_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.11" id="PDI.J0.11_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.11HelpBlock"> 
+                                        <label for="PDI.J0.11_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.11" id="PDI.J0.11_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.11HelpBlock"> 
+                                        <label for="PDI.J0.11_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.11" id="PDI.J0.11_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.11HelpBlock"> 
+                                        <label for="PDI.J0.11_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.11HelpBlock" class="form-text text-muted">Mul oli kehalisi reaktsioone nagu higistamine, värisemine ja südamepekslemine.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.12" id="PDI.J0.12_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.12HelpBlock"> 
+                                        <label for="PDI.J0.12_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.12" id="PDI.J0.12_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.12HelpBlock"> 
+                                        <label for="PDI.J0.12_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.12" id="PDI.J0.12_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.12HelpBlock"> 
+                                        <label for="PDI.J0.12_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.12" id="PDI.J0.12_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.12HelpBlock"> 
+                                        <label for="PDI.J0.12_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.12" id="PDI.J0.12_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.12HelpBlock"> 
+                                        <label for="PDI.J0.12_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.12HelpBlock" class="form-text text-muted">Ma tundsin, et võin minestada.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.13" id="PDI.J0.13_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDI.J0.13HelpBlock"> 
+                                        <label for="PDI.J0.13_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.13" id="PDI.J0.13_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDI.J0.13HelpBlock"> 
+                                        <label for="PDI.J0.13_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.13" id="PDI.J0.13_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDI.J0.13HelpBlock"> 
+                                        <label for="PDI.J0.13_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.13" id="PDI.J0.13_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDI.J0.13HelpBlock"> 
+                                        <label for="PDI.J0.13_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDI.J0.13" id="PDI.J0.13_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDI.J0.13HelpBlock"> 
+                                        <label for="PDI.J0.13_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDI.J0.13HelpBlock" class="form-text text-muted">Mõtlesin, et võin surra.</span>
+                                </div>
+                            </div> 
+                            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                            <h4 class="form-title">Palun hinda allolevaid väiteid, valides numbri, mis kirjeldab kõige paremini kogemusi, mis olid Sul kriitilise sündmuse ajal ja vahetult pärast seda</h3>
+                            <h5 style="padding:0;" class="form-title">Kui väide ei käi üldse Sinu kogemuse kohta<br>palun vali "üldse mitte"</h5>
+                            <h5 class="form-subtitle">(1: üldse mitte - 5: väga palju) (PDEQ)</h5>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-2"></div> 
+                                <div class="col-8">
+
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.1" id="PDEQ.J0.1_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.1HelpBlock"> 
+                                        <label for="PDEQ.J0.1_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.1" id="PDEQ.J0.1_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.1HelpBlock"> 
+                                        <label for="PDEQ.J0.1_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.1" id="PDEQ.J0.1_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.1HelpBlock"> 
+                                        <label for="PDEQ.J0.1_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.1" id="PDEQ.J0.1_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.1HelpBlock"> 
+                                        <label for="PDEQ.J0.1_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.1" id="PDEQ.J0.1_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.1HelpBlock"> 
+                                        <label for="PDEQ.J0.1_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.1HelpBlock" class="form-text text-muted">Oli hetki, kus ma ei saanud aru, mis juhtus. Olin "hajevil" või tundsin, nagu ma ei osaleks toimuvas.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.2" id="PDEQ.J0.2_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.2HelpBlock"> 
+                                        <label for="PDEQ.J0.2_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.2" id="PDEQ.J0.2_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.2HelpBlock"> 
+                                        <label for="PDEQ.J0.2_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.2" id="PDEQ.J0.2_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.2HelpBlock"> 
+                                        <label for="PDEQ.J0.2_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.2" id="PDEQ.J0.2_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.2HelpBlock"> 
+                                        <label for="PDEQ.J0.2_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.2" id="PDEQ.J0.2_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.2HelpBlock"> 
+                                        <label for="PDEQ.J0.2_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.2HelpBlock" class="form-text text-muted">Leidsin end "automaatpiloodil". Tegin asju, millest sain hiljem aru, et ma ei olnud teadlikult otsustanud neid teha.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.3" id="PDEQ.J0.3_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.3HelpBlock"> 
+                                        <label for="PDEQ.J0.3_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.3" id="PDEQ.J0.3_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.3HelpBlock"> 
+                                        <label for="PDEQ.J0.3_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.3" id="PDEQ.J0.3_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.3HelpBlock"> 
+                                        <label for="PDEQ.J0.3_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.3" id="PDEQ.J0.3_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.3HelpBlock"> 
+                                        <label for="PDEQ.J0.3_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.3" id="PDEQ.J0.3_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.3HelpBlock"> 
+                                        <label for="PDEQ.J0.3_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.3HelpBlock" class="form-text text-muted">Mu ajataju muutus. Tundus, nagu asjad toimuksid aegluubis.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.4" id="PDEQ.J0.4_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.4HelpBlock"> 
+                                        <label for="PDEQ.J0.4_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.4" id="PDEQ.J0.4_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.4HelpBlock"> 
+                                        <label for="PDEQ.J0.4_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.4" id="PDEQ.J0.4_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.4HelpBlock"> 
+                                        <label for="PDEQ.J0.4_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.4" id="PDEQ.J0.4_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.4HelpBlock"> 
+                                        <label for="PDEQ.J0.4_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.4" id="PDEQ.J0.4_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.4HelpBlock"> 
+                                        <label for="PDEQ.J0.4_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.4HelpBlock" class="form-text text-muted">Toimuv tundus mulle ebareaalne. Tundus, nagu näeksin und või vaataksin filmi või teatrietendust.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.5" id="PDEQ.J0.5_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.5HelpBlock"> 
+                                        <label for="PDEQ.J0.5_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.5" id="PDEQ.J0.5_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.5HelpBlock"> 
+                                        <label for="PDEQ.J0.5_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.5" id="PDEQ.J0.5_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.5HelpBlock"> 
+                                        <label for="PDEQ.J0.5_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.5" id="PDEQ.J0.5_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.5HelpBlock"> 
+                                        <label for="PDEQ.J0.5_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.5" id="PDEQ.J0.5_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.5HelpBlock"> 
+                                        <label for="PDEQ.J0.5_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.5HelpBlock" class="form-text text-muted">Tundsin, justkui oleksin pealtnägija, kes vaatab, mis minuga juhtub, nagu hõljuksin toimuva kohal või vaataksin seda kõrvalt.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.6" id="PDEQ.J0.6_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.6HelpBlock"> 
+                                        <label for="PDEQ.J0.6_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.6" id="PDEQ.J0.6_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.6HelpBlock"> 
+                                        <label for="PDEQ.J0.6_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.6" id="PDEQ.J0.6_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.6HelpBlock"> 
+                                        <label for="PDEQ.J0.6_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.6" id="PDEQ.J0.6_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.6HelpBlock"> 
+                                        <label for="PDEQ.J0.6_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.6" id="PDEQ.J0.6_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.6HelpBlock"> 
+                                        <label for="PDEQ.J0.6_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.6HelpBlock" class="form-text text-muted">Oli hetki, mil mu taju mu oma kehast tundus moondunud või muutunud. Tundsin end oma kehast lahti ühendatuna või see oli ebatavaliselt suur või väike.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.7" id="PDEQ.J0.7_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.7HelpBlock"> 
+                                        <label for="PDEQ.J0.7_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.7" id="PDEQ.J0.7_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.7HelpBlock"> 
+                                        <label for="PDEQ.J0.7_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.7" id="PDEQ.J0.7_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.7HelpBlock"> 
+                                        <label for="PDEQ.J0.7_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.7" id="PDEQ.J0.7_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.7HelpBlock"> 
+                                        <label for="PDEQ.J0.7_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.7" id="PDEQ.J0.7_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.7HelpBlock"> 
+                                        <label for="PDEQ.J0.7_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.7HelpBlock" class="form-text text-muted">Tundsin, nagu asjad, mis juhtusid tegelikult kellegi teisega, juhtuksid minuga — nagu oleksin ohus, kuigi ma tegelikult ei olnud.</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.8" id="PDEQ.J0.8_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.8HelpBlock"> 
+                                        <label for="PDEQ.J0.8_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.8" id="PDEQ.J0.8_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.8HelpBlock"> 
+                                        <label for="PDEQ.J0.8_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.8" id="PDEQ.J0.8_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.8HelpBlock"> 
+                                        <label for="PDEQ.J0.8_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.8" id="PDEQ.J0.8_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.8HelpBlock"> 
+                                        <label for="PDEQ.J0.8_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.8" id="PDEQ.J0.8_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.8HelpBlock"> 
+                                        <label for="PDEQ.J0.8_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.8HelpBlock" class="form-text text-muted">Oma üllatuseks leidsin hiljem, et samal ajal juhtus palju asju, millest ma teadlik ei olnud — just eriti asju, mida ma tavaliselt oleksin märganud.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.9" id="PDEQ.J0.9_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.9HelpBlock"> 
+                                        <label for="PDEQ.J0.9_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.9" id="PDEQ.J0.9_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.9HelpBlock"> 
+                                        <label for="PDEQ.J0.9_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.9" id="PDEQ.J0.9_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.9HelpBlock"> 
+                                        <label for="PDEQ.J0.9_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.9" id="PDEQ.J0.9_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.9HelpBlock"> 
+                                        <label for="PDEQ.J0.9_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.9" id="PDEQ.J0.9_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.9HelpBlock"> 
+                                        <label for="PDEQ.J0.9_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.9HelpBlock" class="form-text text-muted">Olin segaduses. See tähendab, et oli hetki, kui mul oli raske aru mõista, mis toimub.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.10" id="PDEQ.J0.10_0" type="radio" class="custom-control-input" value="1" aria-describedby="PDEQ.J0.10HelpBlock"> 
+                                        <label for="PDEQ.J0.10_0" class="custom-control-label">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.10" id="PDEQ.J0.10_1" type="radio" class="custom-control-input" value="2" aria-describedby="PDEQ.J0.10HelpBlock"> 
+                                        <label for="PDEQ.J0.10_1" class="custom-control-label">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.10" id="PDEQ.J0.10_2" type="radio" class="custom-control-input" value="3" aria-describedby="PDEQ.J0.10HelpBlock"> 
+                                        <label for="PDEQ.J0.10_2" class="custom-control-label">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.10" id="PDEQ.J0.10_3" type="radio" class="custom-control-input" value="4" aria-describedby="PDEQ.J0.10HelpBlock"> 
+                                        <label for="PDEQ.J0.10_3" class="custom-control-label">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="PDEQ.J0.10" id="PDEQ.J0.10_4" type="radio" class="custom-control-input" value="5" aria-describedby="PDEQ.J0.10HelpBlock"> 
+                                        <label for="PDEQ.J0.10_4" class="custom-control-label">5</label>
+                                    </div> 
+                                    <span id="PDEQ.J0.10HelpBlock" class="form-text text-muted">Kaotasin orientatsioonivõime; see tähendab, et oli hetki, kui ma ei olnud kindel, kus ma olen või mis aeg on.</span>
+                                </div>
+                            </div>
+
+                            <div style="border:none;padding-bottom:0;" class="form-group row" style="border:none;">
+                                <label class="col-2"></label> 
+                                <div class="col-8">
+                                    <!-- Default unchecked -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input required="required" name="privacy" type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                        <label class="custom-control-label" for="defaultUnchecked">Olen nõus <a href="/privacy">Privaatsuspoliitikaga</a></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row" style="border:none;">
+                                <div class="offset-4 col-8">
+                                    <!-- Default unchecked -->
+                                    <button name="submit" type="submit" class="btn btn-lg btn-primary">Sisesta</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white"><a href="https://github.com/guillaumefe/proto-trauma-tetris">Source code</a></p>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom JavaScript for this theme -->
+        <script src="js/scrolling-nav.js"></script>
+
+        <script>
+            jQuery = $ //quick fix
+        </script>
+
+        <!-- Jquery cookie plugin -->
+        <script src="jquery.cookie.js"></script>
+
+        <script>
+
+            let data = {}
+
+            $(window).bind("pageshow", function() {
+                var form = $('form'); 
+                // let the browser natively reset defaults
+                form[0].reset();
+
+                if (typeof $.cookie('data') === 'undefined'){
+                    //create cookie
+                    $.cookie("data", JSON.stringify(data), { expires : 1 });
+                } else {
+                    data = JSON.parse($.cookie("data"));
+                }
+                for (key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        document.q1[key].value = data[key]
+                    }
+                }
+
+            });
+
+            if (typeof $.cookie('data') === 'undefined'){
+                //create cookie
+                $.cookie("data", JSON.stringify(data), { expires : 1 });
+            } else {
+                data = JSON.parse($.cookie("data"));
+            }
+            for (key in data) {
+                if (data.hasOwnProperty(key)) {
+                    document.q1[key].value = data[key]
+                }
+            }
+
+            check_empty = function() {
+                let count = 0
+                for (key in data) {
+                    if (data[key]){
+                        count++
+                    }
+                }
+                if(count) {
+                    document.getElementById('empty').style.display = 'block'
+                } else {
+                    document.getElementById('empty').style.display = 'none'
+                }
+            }
+
+            remove_cookie = function() {
+                $.removeCookie('data');
+                for (key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        document.q1[key].value = ''
+                    }
+                }
+                data = {}
+                check_empty()
+            }
+
+            check_empty()
+
+            $('#q1').change(function(event){
+                let el = event.target
+                let name = el.name
+                data[name] = el.value
+                $.cookie("data", JSON.stringify(data), { expires : 1 });
+                check_empty()
+            });
+
+        $("#image1_link").on('click', function(event) {
+            event.preventDefault();
+            let url = '/static/images/continuum.png'
+            let win = window.open(url, '_blank');
+            win.focus();
+        });
+
+        </script>
+
+    </body>
+
+</html>
