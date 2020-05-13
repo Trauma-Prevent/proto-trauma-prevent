@@ -1,6 +1,9 @@
 # traumaprevent
 
-A new Flutter application.
+Prevent post-traumatic stress syndromes linked to the Covid-19 pandemy
+
+Application flutter build on top of library card_settings
+A lot of work yet to do!
 
 ## Getting Started
 
