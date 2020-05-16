@@ -119,7 +119,7 @@ class _TraumaPreventExampleState extends State<TraumaPreventExample> {
       body: Form(
         key: _formKey,
         child: (orientation == Orientation.portrait)
-            ? _buildPortraitLayout()
+            ? _buildLayout()
             : _buildLandscapeLayout(),
       ),
     );
@@ -127,7 +127,7 @@ class _TraumaPreventExampleState extends State<TraumaPreventExample> {
 
   /* CARDSETTINGS FOR EACH LAYOUT */
 
-  CardSettings _buildPortraitLayout() {
+  CardSettings _buildLayout() {
     return CardSettings.sectioned(
       showMaterialonIOS: _showMaterialonIOS,
       labelWidth: 100,
