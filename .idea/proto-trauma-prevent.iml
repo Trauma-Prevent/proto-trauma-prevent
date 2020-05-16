@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../proto-trauma-prevent/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../proto-trauma-prevent/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../proto-trauma-prevent/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../proto-trauma-prevent/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../proto-trauma-prevent/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../proto-trauma-prevent/libs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../proto-trauma-prevent/proguard_logs" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/lib/card_settings/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/lib/card_settings/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/lib/card_settings/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/mobile-app/lib/card_settings/example/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

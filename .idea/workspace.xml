@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dabeea9-6d15-4d76-8a74-817a8a3e29e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/Logo Trauma Prevent - transparent-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/Logo Trauma Prevent-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/Logo Trauma Prevent-03.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/db/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/db/db.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/db/db.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/db/docs/local.uri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/croatian/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/dannish/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/end.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/form1.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/form2.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/login.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/privacy.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/register.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/support.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/tau.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/estonian/trad1-Helena/tetris.est.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/french/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/translationGreek1-zoe/e.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/greek/translationGreek1-zoe/form2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/portuguese/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/romanian/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/russian/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/GAF - Spanish.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/PCL-5-Spanish-version.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/PDEQ-Spanish.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/PDI - Spanish.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/spanish/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/turkish/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/languages/ukrainian/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/css/scrolling-nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/js/scrolling-nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery-easing/jquery.easing.compatibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery-easing/jquery.easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery-easing/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/bootstrap-page/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/.tm_properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/MIT-LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/cookie.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/test/malformed_cookie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/test/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/carhartl-jquery-cookie-92b7715/test/tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/Cell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/Display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/Stage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/StartButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/Tetris.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/UploadButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledCell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledDisplay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledStage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledStartButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledTetris.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/components/styles/StyledUploadButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/fonts/Pixel-LCD-7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/gameHelpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/hooks/useGameStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/hooks/useInterval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/hooks/usePlayer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/hooks/useStage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/imges/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/lib/tetris/src/tetrominos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/end.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/form0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/form2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/privacy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/tau.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/pages/tetris.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/OLD/static/images/continuum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/kotlin/com/example/traumaprevent/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/PUBLISH.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/java/com/example/cardsettingsexample/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/java/com/example/example/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/ios/Runner/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/lib/model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/lib/results.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/example/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/android/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/example.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/example.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/images/ios/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/card_settings.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/helpers/converter_functions.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/helpers/decimal_text_input_formatter.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/models/common_card_field_attributes.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/action_fields/card_settings_button.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/card_field_layout.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/card_settings_field.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/card_settings_panel.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/information_fields/card_settings_header.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/information_fields/card_settings_instructions.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/numeric_fields/card_settings_currency.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/numeric_fields/card_settings_double.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/numeric_fields/card_settings_int.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/numeric_fields/card_settings_slider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/numeric_fields/card_settings_switch.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/picker_fields/card_settings_color_picker.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/picker_fields/card_settings_date_picker.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/picker_fields/card_settings_list_picker.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/picker_fields/card_settings_number_picker.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/picker_fields/card_settings_time_picker.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/selection_fields/card_settings_multiselect.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/text_fields/card_settings_email.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/text_fields/card_settings_paragraph.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/text_fields/card_settings_password.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/text_fields/card_settings_phone.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/lib/widgets/text_fields/card_settings_text.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/card_settings/test/converters_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/lib/results.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile-app/mobile-app/test/widget_test.dart" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mobile-app" />
+  </component>
+  <component name="ProjectId" id="1bzMFUesVJQlgLU8L2Ofl5c8Wl2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dabeea9-6d15-4d76-8a74-817a8a3e29e2" name="Default Changelist" comment="" />
+      <created>1589630364178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589630364178</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
