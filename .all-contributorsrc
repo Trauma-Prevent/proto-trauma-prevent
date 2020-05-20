@@ -19,7 +19,8 @@
         "projectManagement",
         "translation",
         "test",
-        "talk"
+        "talk",
+        "userTesting"
       ]
     }
   ],
