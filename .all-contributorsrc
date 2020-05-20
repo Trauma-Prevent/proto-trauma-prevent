@@ -16,6 +16,23 @@
         "review",
         "test"
       ]
+    },{
+      "login": "Ouphix",
+      "name": "Ouphix",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/14142630?v=4",
+      "profile": "https://ecritureauto.wordpress.com/",
+      "contributions": [
+        "content",
+        "doc",
+        "eventOrganizing",
+        "fundingFinding",
+        "ideas",
+        "projectManagement",
+        "translation",
+        "talk",
+        "userTesting",
+        "video"
+      ]
     }
   ],
   "contributorsPerLine": 7,
