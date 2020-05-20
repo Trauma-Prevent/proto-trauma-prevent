@@ -26,7 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://biramesene.fr"><img src="https://avatars3.githubusercontent.com/u/7113395?v=4" width="100px;" alt=""/><br /><sub><b>Birame SENE</b></sub></a><br /><a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=bsene" title="Code">💻</a> <a href="#question-bsene" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="http://biramesene.fr"><img src="https://avatars3.githubusercontent.com/u/7113395?v=4" width="100px;" alt=""/><br /><sub><b>Birame SENE</b></sub></a><br /><a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=bsene" title="Code">💻</a> <a href="#question-bsene" title="Answering Questions">💬</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/pulls?q=is%3Apr+reviewed-by%3Absene" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
