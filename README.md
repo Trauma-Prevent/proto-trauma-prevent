@@ -1,5 +1,6 @@
 The main template of this application is from https://pub.dev/packages/card_settings#-example-tab-
-Some part of the template have been commented out, variable names has been adapted from `Pony` to `TrauPrevent` to fit our purpose
+
+Some part of the template have been commented out, variable names has been adapted from `Pony` to `TraumaPrevent` to fit our purpose
 
 
 The purpose of this project is explained here
@@ -37,8 +38,8 @@ git clone https://github.com/guillaumefe/proto-trauma-prevent.git
 
 - a flutter starting point app
 - a few questions displayed
-- a reset button that clear the form
-- a save button that display form content
+- a reset button that clears the form
+- a save button that displays form content
 - a button upper-right ("saved" icon) that comes from the original template and should be replaced
 
 # What has to be done
