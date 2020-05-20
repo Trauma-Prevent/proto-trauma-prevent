@@ -6,6 +6,17 @@
   "commit": false,
   "contributors": [
     {
+      "login": "bsene",
+      "name": "Birame SENE",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7113395?v=4",
+      "profile": "http://biramesene.fr",
+      "contributions": [
+        "code",
+        "question",
+        "review",
+        "test"
+      ]
+    },{
       "login": "Ouphix",
       "name": "Ouphix",
       "avatar_url": "https://avatars2.githubusercontent.com/u/14142630?v=4",
@@ -18,7 +29,6 @@
         "ideas",
         "projectManagement",
         "translation",
-        "test",
         "talk",
         "userTesting",
         "video"
