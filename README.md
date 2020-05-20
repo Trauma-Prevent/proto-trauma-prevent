@@ -26,7 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://ecritureauto.wordpress.com/"><img src="https://avatars2.githubusercontent.com/u/14142630?v=4" width="100px;" alt=""/><br /><sub><b>Ouphix</b></sub></a><br /><a href="#content-Ouphix" title="Content">🖋</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=Ouphix" title="Documentation">📖</a> <a href="#eventOrganizing-Ouphix" title="Event Organizing">📋</a> <a href="#fundingFinding-Ouphix" title="Funding Finding">🔍</a></td>
+    <td align="center"><a href="https://ecritureauto.wordpress.com/"><img src="https://avatars2.githubusercontent.com/u/14142630?v=4" width="100px;" alt=""/><br /><sub><b>Ouphix</b></sub></a><br /><a href="#content-Ouphix" title="Content">🖋</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=Ouphix" title="Documentation">📖</a> <a href="#eventOrganizing-Ouphix" title="Event Organizing">📋</a> <a href="#fundingFinding-Ouphix" title="Funding Finding">🔍</a> <a href="#ideas-Ouphix" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
