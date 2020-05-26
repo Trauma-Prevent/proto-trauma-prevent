@@ -1,6 +1,6 @@
 # proto-trauma-tetris
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Simple prototype visant à illustrer le concept et peut-être fournir une première solution déployée
 
@@ -28,6 +28,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://biramesene.fr"><img src="https://avatars3.githubusercontent.com/u/7113395?v=4" width="100px;" alt=""/><br /><sub><b>Birame SENE</b></sub></a><br /><a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=bsene" title="Code">💻</a> <a href="#question-bsene" title="Answering Questions">💬</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/pulls?q=is%3Apr+reviewed-by%3Absene" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=bsene" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://ecritureauto.wordpress.com/"><img src="https://avatars2.githubusercontent.com/u/14142630?v=4" width="100px;" alt=""/><br /><sub><b>Ouphix</b></sub></a><br /><a href="#content-Ouphix" title="Content">🖋</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=Ouphix" title="Documentation">📖</a> <a href="#eventOrganizing-Ouphix" title="Event Organizing">📋</a> <a href="#fundingFinding-Ouphix" title="Funding Finding">🔍</a> <a href="#ideas-Ouphix" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-Ouphix" title="Project Management">📆</a> <a href="#translation-Ouphix" title="Translation">🌍</a> <a href="#talk-Ouphix" title="Talks">📢</a> <a href="#userTesting-Ouphix" title="User Testing">📓</a> <a href="#video-Ouphix" title="Videos">📹</a></td>
+    <td align="center"><a href="https://github.com/olanyer"><img src="https://avatars2.githubusercontent.com/u/49960283?v=4" width="100px;" alt=""/><br /><sub><b>Guillaume O'LANYER</b></sub></a><br /><a href="#security-olanyer" title="Security">🛡️</a> <a href="#question-olanyer" title="Answering Questions">💬</a> <a href="https://github.com/Trauma-Prevent/proto-trauma-prevent/commits?author=olanyer" title="Documentation">📖</a></td>
   </tr>
 </table>
 
