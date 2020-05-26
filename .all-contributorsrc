@@ -16,7 +16,8 @@
         "review",
         "test"
       ]
-    },{
+    },
+    {
       "login": "Ouphix",
       "name": "Ouphix",
       "avatar_url": "https://avatars2.githubusercontent.com/u/14142630?v=4",
@@ -32,6 +33,15 @@
         "talk",
         "userTesting",
         "video"
+      ]
+    },
+    {
+      "login": "olanyer",
+      "name": "Guillaume O'LANYER",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/49960283?v=4",
+      "profile": "https://github.com/olanyer",
+      "contributions": [
+        "security"
       ]
     }
   ],
